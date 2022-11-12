@@ -16,6 +16,10 @@ export default createStore({
         name: "adam-warlock",
         description: "ongoing my anime",
       },
+      {
+        name: "aero",
+        description: "ongoing my anime",
+      },
     ],
       unreleased: []
     }
