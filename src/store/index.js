@@ -6,11 +6,11 @@ export default createStore({
       released: [
       {
         name: "abomination",
-        description: "Вася пупкин",
+        description: "Глупый сброд! Ты ниже меня!",
       },
       {
         name: "adam-warlock",
-        description: "ongoing my anime",
+        description: "В конце хода вы берете карту, если вы выигрываете в этой локации.",
       },
       {
         name: "aero",
@@ -20,8 +20,21 @@ export default createStore({
         name: "agatha-harkness",
         description: "Начинает игру в руке и играет карты за вас."
       },
+      {
+        name: "agent-13",
+        description: "При раскрытии: Вы кладете в руку случайную карту."
+      },
+      {
+        name: "agatha-harkness",
+        description: "Начинает игру в руке и играет карты за вас."
+      },
     ],
-      unreleased: []
+      unreleased: [
+        {
+          name: "absorbing-man",
+          description: "On Reveal: If the last card you played has an On Reveal ability, this card copies it.",
+        },
+      ]
     }
   },
   getters: {
