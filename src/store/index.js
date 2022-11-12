@@ -20,6 +20,10 @@ export default createStore({
         name: "aero",
         description: "ongoing my anime",
       },
+      {
+        name: "agatha-harkness",
+        description: "Начинает игру в руке и играет карты за вас."
+      },
     ],
       unreleased: []
     }
