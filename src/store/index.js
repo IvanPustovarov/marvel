@@ -18,7 +18,7 @@ export default createStore({
       },
       {
         name: "aero",
-        description: "ongoing my anime",
+        description: "При раскрытии: Перемещает в эту локацию карты, сыгранные противником на этом ходу.",
       },
       {
         name: "agatha-harkness",
