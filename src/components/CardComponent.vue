@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <!-- <div class="flat"> -->
     <div class="card">
       <img :src="require(`@/assets/cards/${name}.webp`)" alt="" />
       <div class="description">
@@ -7,6 +8,7 @@
         <p>{{ editDescription(description) }}</p>
       </div>
     </div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -48,6 +50,11 @@ export default {
 
 
 <style scoped lang="scss">
+// @keyframes rotate {
+//   50% {
+//     transform: rotateX(0deg);
+//   }
+// }
 .container {
   cursor: pointer;
   height: 24rem;
@@ -55,10 +62,15 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-content: flex-start;
+  // .flat {
+  //   transform-style: flat;
   .card {
     display: flex;
     align-items: center;
     flex-direction: column;
+    // animation: rotate 5s infinite;
+    // transform: rotateX(45deg);
+    // position: relative;
     .description {
       display: flex;
       flex-direction: column;
@@ -67,8 +79,29 @@ export default {
       font-size: 14px;
       width: 15rem;
       text-align: center;
+      background: rgb(0, 0, 0);
+      padding: 5px;
+      border-radius: 10px;
       span {
-        font-size: 18px;
+        font-size: 17px;
+        font-weight: 600;
+      }
+    }
+    .description:hover {
+      display: flex;
+      flex-direction: column;
+      transition: all 0.5s ease-out;
+      color: black;
+      font-weight: 500;
+      font-size: 14px;
+      width: 15rem;
+      text-align: center;
+      background: white;
+      padding: 5px;
+      border-radius: 10px;
+      outline: 4px solid black;
+      span {
+        font-size: 17px;
         font-weight: 600;
       }
     }
@@ -76,5 +109,6 @@ export default {
       width: 300px;
     }
   }
+  //}
 }
 </style>
