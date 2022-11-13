@@ -1,6 +1,11 @@
 <template>
-  <div class="container" @click="goToCard">
-    <!-- <div class="flat"> -->
+  <div
+    class="container"
+    @click="goToCard"
+    @mouseenter="mouseEnter"
+    @mousemove="mouseMove"
+    @mouseleave="mouseLeave"
+  >
     <div class="card">
       <img :src="require(`@/assets/cards/${name}.webp`)" alt="" />
       <div class="description">
@@ -8,7 +13,6 @@
         <p>{{ editDescription(description) }}</p>
       </div>
     </div>
-    <!-- </div> -->
   </div>
 </template>
 
@@ -23,6 +27,10 @@ export default {
   data() {
     return {
       boldText: "",
+      rotX: null,
+      rotY: null,
+      rotateMoveX: null,
+      rotateMoveY: null,
     };
   },
   methods: {
@@ -47,17 +55,48 @@ export default {
     goToCard() {
       return this.$router.push(`/card/${this.name}`);
     },
+    mouseEnter() {
+      this.$el.addEventListener("mousemove", this.mouseMove, false);
+      this.$el.style.transition = "all 0.5s ease-out";
+    },
+    mouseLeave() {
+      this.$el.style.transform = "none";
+      this.rotX = null;
+      this.rotY = null;
+
+      this.rotateMoveY = null;
+      this.rotateMoveX = null;
+    },
+    mouseMove(event) {
+      if (this.rotX && this.rotY) {
+        const wayX = event.clientX - this.rotX; // если число положительное, значит мы двинулись вправо. иначе -- влево
+        const wayY = event.clientY - this.rotY; // если число положительно -- двинулись вниз, отрицательно -- вверх.
+
+        if (wayX > 0) {
+          this.rotateMoveX += 0.2;
+        }
+        if (wayX < 0) {
+          this.rotateMoveX -= 0.2;
+        }
+
+        if (wayY > 0) {
+          this.rotateMoveY += 0.2;
+        }
+        if (wayY < 0) {
+          this.rotateMoveY -= 0.2;
+        }
+      }
+      this.$el.style.transform = `perspective(1000px) rotateX(${this.rotateMoveX}deg) rotateY(${this.rotateMoveY}deg) scale3d(1.035, 1.035, 1.035)`;
+
+      this.rotX = event.clientX;
+      this.rotY = event.clientY;
+    },
   },
 };
 </script>
 
 
 <style scoped lang="scss">
-// @keyframes rotate {
-//   50% {
-//     transform: rotateX(0deg);
-//   }
-// }
 .container {
   cursor: pointer;
   height: 24rem;
@@ -65,15 +104,10 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-content: flex-start;
-  // .flat {
-  //   transform-style: flat;
   .card {
     display: flex;
     align-items: center;
     flex-direction: column;
-    // animation: rotate 5s infinite;
-    // transform: rotateX(45deg);
-    // position: relative;
     .description {
       display: flex;
       flex-direction: column;
@@ -89,29 +123,16 @@ export default {
         font-size: 17px;
         font-weight: 600;
       }
-    }
-    .description:hover {
-      display: flex;
-      flex-direction: column;
-      transition: all 0.5s ease-out;
-      color: black;
-      font-weight: 500;
-      font-size: 14px;
-      width: 15rem;
-      text-align: center;
-      background: white;
-      padding: 5px;
-      border-radius: 10px;
-      outline: 4px solid black;
-      span {
-        font-size: 17px;
-        font-weight: 600;
+      &:hover {
+        color: black;
+        background: white;
+        outline: 4px solid black;
+        transition: all 0.5s ease-out;
       }
     }
     img {
       width: 300px;
     }
   }
-  //}
 }
 </style>

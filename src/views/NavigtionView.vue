@@ -60,6 +60,20 @@ export default {
 }
 .br {
   height: 1rem;
-  background-color: aqua;
+  background: linear-gradient(-45deg, #ed193b, #a98055, #f286e2, #681d7a);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 </style>
