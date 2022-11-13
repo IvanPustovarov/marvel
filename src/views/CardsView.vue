@@ -18,9 +18,7 @@ export default {
   data() {
     return {};
   },
-  mounted() {
-    // console.log(this.cards);
-  },
+  mounted() {},
   computed: {
     cards() {
       return this.$store.getters.getCards;
@@ -34,6 +32,6 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 100%;
+  justify-content: space-evenly;
 }
 </style>

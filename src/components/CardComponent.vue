@@ -21,9 +21,7 @@ export default {
 
 <style scoped lang="scss">
 .container {
-  position: relative;
-  width: 300px;
-  height: 305px;
+  height: 24rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -32,10 +30,10 @@ export default {
     display: flex;
     align-items: center;
     flex-direction: column;
-    position: absolute;
     .description {
       color: white;
       font-weight: 500;
+      width: 16rem;
     }
     img {
       width: 300px;
