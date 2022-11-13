@@ -1,13 +1,13 @@
 <template>
-  <div
-    class="container"
-    @click="goToCard"
-    @mouseenter="mouseEnter"
-    @mousemove="mouseMove"
-    @mouseleave="mouseLeave"
-  >
+  <div class="container" @click="goToCard">
     <div class="card">
-      <img :src="require(`@/assets/cards/${name}.webp`)" alt="" />
+      <img
+        :src="require(`@/assets/cards/${name}.webp`)"
+        alt="card"
+        @mouseenter="mouseEnter"
+        @mousemove="mouseMove"
+        @mouseleave="mouseLeave"
+      />
       <div class="description">
         <span v-if="boldText">{{ boldText }}</span>
         <p>{{ editDescription(description) }}</p>
@@ -68,9 +68,10 @@ export default {
       this.rotateMoveX = null;
     },
     mouseMove(event) {
+      // console.log(event.offsetX, event.offsetY); // we did it!
       if (this.rotX && this.rotY) {
-        const wayX = event.clientX - this.rotX; // если число положительное, значит мы двинулись вправо. иначе -- влево
-        const wayY = event.clientY - this.rotY; // если число положительно -- двинулись вниз, отрицательно -- вверх.
+        const wayX = event.offsetX - this.rotX; // если число положительное, значит мы двинулись вправо. иначе -- влево
+        const wayY = event.offsetY - this.rotY; // если число положительно -- двинулись вниз, отрицательно -- вверх.
 
         if (wayX > 0) {
           this.rotateMoveX += 0.2;
@@ -88,8 +89,8 @@ export default {
       }
       this.$el.style.transform = `perspective(1000px) rotateX(${this.rotateMoveX}deg) rotateY(${this.rotateMoveY}deg) scale3d(1.035, 1.035, 1.035)`;
 
-      this.rotX = event.clientX;
-      this.rotY = event.clientY;
+      this.rotX = event.offsetX;
+      this.rotY = event.offsetY;
     },
   },
 };
