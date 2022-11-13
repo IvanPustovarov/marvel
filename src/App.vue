@@ -14,13 +14,16 @@ export default {
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: "Arkhip";
+  src: local("Arkhip"), url(./fonts/Arkhip/Arkhip_font.ttf) format("truetype");
+}
 * {
+  font-family: "Arkhip", Helvetica, Arial;
   padding: 0;
   margin: 0;
 }
 body {
-  // height: 100vh;
-  // width: 100%;
   display: flex;
   justify-content: center;
   background: center repeat url("./assets/main-back.jpg");
@@ -30,6 +33,5 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  // width: 100vw;
 }
 </style>
