@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" @click="goToCard">
     <!-- <div class="flat"> -->
     <div class="card">
       <img :src="require(`@/assets/cards/${name}.webp`)" alt="" />
@@ -43,6 +43,9 @@ export default {
         this.boldText = open;
       }
       return newDescription ? newDescription : this.description;
+    },
+    goToCard() {
+      return this.$router.push(`/card/${this.name}`);
     },
   },
 };
