@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="nav-panel">
     <nav>
       <div class="logo-img">
         <router-link to="/">
@@ -25,35 +25,37 @@ export default {
 
 
 <style scoped lang="scss">
-nav {
-  background-color: rgb(27, 30, 41);
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  a {
-    font-style: italic;
-    font-weight: bold;
-    color: #ffffff;
-
-    &.router-link-exact-active {
-      color: #ffffff;
-    }
-  }
-  .logo-img {
-    position: absolute;
-    cursor: pointer;
-    top: 5px;
-    left: 14px;
-    height: 5rem;
-    img {
-      width: 80%;
-    }
-  }
-  .links {
-    padding: 2rem 0 1.5rem 10rem;
+.nav-panel {
+  width: 100%;
+  nav {
+    background-color: rgb(27, 30, 41);
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    position: relative;
+    a {
+      font-style: italic;
+      font-weight: bold;
+      color: #ffffff;
+
+      &.router-link-exact-active {
+        color: #ffffff;
+      }
+    }
+    .logo-img {
+      position: absolute;
+      cursor: pointer;
+      top: 5px;
+      left: 14px;
+      height: 5rem;
+      img {
+        width: 80%;
+      }
+    }
+    .links {
+      padding: 2rem 0 1.5rem 10rem;
+      display: flex;
+      align-items: center;
+    }
   }
 }
 .br {

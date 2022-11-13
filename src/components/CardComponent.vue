@@ -25,7 +25,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  //align-items: flex-start;
   .card {
     display: flex;
     align-items: center;
