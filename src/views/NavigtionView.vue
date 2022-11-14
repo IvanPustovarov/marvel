@@ -68,8 +68,6 @@ export default {
       align-items: center;
       .item {
         padding: 0 1rem 0 0.3rem;
-        // border-right: 1px solid white;
-        // border-left: 1px solid white;
         height: 100%;
         height: 5rem;
         display: flex;
@@ -77,6 +75,7 @@ export default {
         font-size: 18px;
         a {
           text-decoration: none;
+          padding: 2.5rem 0 2.5rem 0;
         }
         &:hover {
           background: linear-gradient(
@@ -85,7 +84,6 @@ export default {
             rgb(35, 14, 83)
           );
           background-size: 200% 200%;
-          //box-shadow: inset 0px 0px 17px 2px rgba(45, 195, 215, 0.5);
         }
       }
     }
