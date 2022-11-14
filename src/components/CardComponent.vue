@@ -70,15 +70,21 @@ export default {
       let Y = event.offsetY / 15;
       if (X < 10 && Y < 10) {
         Y *= -1;
+        X *= -1;
+        X -= 20;
+        Y += 10;
       }
       if (X > 10 && Y < 10) {
         X *= -1;
+        X -= 10;
+        Y -= 10;
       }
       if (X > 10 && Y > 10) {
         Y *= -1;
       }
       if (X < 10 && Y > 10) {
         X *= -1;
+        X += 20;
       }
       // console.log(X, Y);
       this.rotateMoveX = X;
