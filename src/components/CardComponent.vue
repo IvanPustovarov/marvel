@@ -27,8 +27,6 @@ export default {
   data() {
     return {
       boldText: "",
-      rotX: null,
-      rotY: null,
       rotateMoveX: null,
       rotateMoveY: null,
     };
@@ -61,36 +59,34 @@ export default {
     },
     mouseLeave() {
       this.$el.style.transform = "none";
-      this.rotX = null;
-      this.rotY = null;
 
       this.rotateMoveY = null;
       this.rotateMoveX = null;
     },
     mouseMove(event) {
       // console.log(event.offsetX, event.offsetY); // we did it!
-      if (this.rotX && this.rotY) {
-        const wayX = event.offsetX - this.rotX; // если число положительное, значит мы двинулись вправо. иначе -- влево
-        const wayY = event.offsetY - this.rotY; // если число положительно -- двинулись вниз, отрицательно -- вверх.
+      let X = event.offsetX / 15;
 
-        if (wayX > 0) {
-          this.rotateMoveX += 0.2;
-        }
-        if (wayX < 0) {
-          this.rotateMoveX -= 0.2;
-        }
-
-        if (wayY > 0) {
-          this.rotateMoveY += 0.2;
-        }
-        if (wayY < 0) {
-          this.rotateMoveY -= 0.2;
-        }
+      let Y = event.offsetY / 15;
+      if (X < 10 && Y < 10) {
+        Y *= -1;
       }
-      this.$el.style.transform = `perspective(1000px) rotateX(${this.rotateMoveX}deg) rotateY(${this.rotateMoveY}deg) scale3d(1.035, 1.035, 1.035)`;
+      if (X > 10 && Y < 10) {
+        X *= -1;
+      }
+      if (X > 10 && Y > 10) {
+        Y *= -1;
+      }
+      if (X < 10 && Y > 10) {
+        X *= -1;
+      }
+      // console.log(X, Y);
+      this.rotateMoveX = X;
+      this.rotateMoveY = Y;
 
-      this.rotX = event.offsetX;
-      this.rotY = event.offsetY;
+      // console.log(this.rotateMoveX, this.rotateMoveY);
+
+      this.$el.style.transform = `perspective(1000px) rotateX(-10deg) rotateY(10deg) scale3d(1.035, 1.035, 1.035)`;
     },
   },
 };
