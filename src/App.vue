@@ -2,14 +2,16 @@
   <div class="container">
     <NavigtionView />
     <router-view />
+    <FooterView />
   </div>
 </template>
 
 <script>
 import NavigtionView from "@/views/NavigtionView.vue";
+import FooterView from "./views/FooterView.vue";
 export default {
   name: "NavigationView",
-  components: { NavigtionView },
+  components: { NavigtionView, FooterView },
 };
 </script>
 
