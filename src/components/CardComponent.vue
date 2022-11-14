@@ -86,7 +86,7 @@ export default {
 
       // console.log(this.rotateMoveX, this.rotateMoveY);
 
-      this.$el.style.transform = `perspective(1000px) rotateX(-10deg) rotateY(10deg) scale3d(1.035, 1.035, 1.035)`;
+      this.$el.style.transform = `perspective(1000px) rotateX(${this.rotateMoveX}deg) rotateY(${this.rotateMoveY}deg) scale3d(1.035, 1.035, 1.035)`;
     },
   },
 };
