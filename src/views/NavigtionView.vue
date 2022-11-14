@@ -7,9 +7,15 @@
         </router-link>
       </div>
       <div class="links">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/cards">Cards</router-link> |
-        <router-link to="/locations">Locations</router-link>
+        <div class="item">
+          <router-link to="/">Главная</router-link>
+        </div>
+        <div class="item">
+          <router-link to="/cards">Карты</router-link>
+        </div>
+        <div class="item">
+          <router-link to="/locations">Локации</router-link>
+        </div>
       </div>
     </nav>
     <div class="br"></div>
@@ -49,17 +55,44 @@ export default {
       height: 5rem;
       img {
         width: 80%;
+        &:hover {
+          transform: perspective(1000px) rotateX(0deg) rotateY(0deg)
+            scale3d(1.035, 1.035, 1.035);
+          transition: all 0.5s ease-out;
+        }
       }
     }
     .links {
-      padding: 2rem 0 1.5rem 10rem;
+      padding: 0 0 0 10rem;
       display: flex;
       align-items: center;
+      .item {
+        padding: 0 1rem 0 0.3rem;
+        // border-right: 1px solid white;
+        // border-left: 1px solid white;
+        height: 100%;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        a {
+          text-decoration: none;
+        }
+        &:hover {
+          background: linear-gradient(
+            180deg,
+            rgba(128, 70, 222, 0.9),
+            rgb(35, 14, 83)
+          );
+          background-size: 200% 200%;
+          //box-shadow: inset 0px 0px 17px 2px rgba(45, 195, 215, 0.5);
+        }
+      }
     }
   }
 }
 .br {
-  height: 1rem;
+  height: 0.7rem;
   background: linear-gradient(-45deg, #ed193b, #a98055, #f286e2, #681d7a);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;

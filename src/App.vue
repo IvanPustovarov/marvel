@@ -26,7 +26,7 @@ export default {
 body {
   display: flex;
   justify-content: center;
-  background: center repeat url("./assets/main-back.jpg");
+  background: center repeat url("./assets/back.jpg");
 }
 
 .container {

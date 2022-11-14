@@ -29,9 +29,7 @@ export default {
   data() {
     return {};
   },
-  mounted() {
-    console.log(this.card);
-  },
+  mounted() {},
   computed: {
     params() {
       return this.$route.params;
@@ -69,7 +67,8 @@ export default {
       padding: 1rem;
       background: black;
       color: white;
-      box-shadow: 0px 10px 25px 5px rgba(255, 255, 255, 0.5);
+      box-shadow: inset 0px 0px 17px 2px rgba(255, 255, 255, 0.5),
+        0px 0px 49px 6px rgba(255, 255, 255, 0.5);
       .stats {
         display: flex;
         flex-direction: row;
