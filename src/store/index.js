@@ -6,13 +6,13 @@ export default createStore({
       released: [
       {
         name: "abomination",
-        description: "Глупый сброд! Вы ниже меня!",
+        description: "Глупый сброд! Ты ниже меня!",
         cost: 5,
         power: 9
       },
       {
         name: "adam-warlock",
-        description: "В конце хода вы берете карту, если вы выигрываете в этой локации.",
+        description: "Если в конце хода вы выигрываете в этой локации, вы берете карту.",
         cost: 2,
         power: 0
       },
@@ -36,7 +36,7 @@ export default createStore({
       },
       {
         name: "america-chavez",
-        description: "Вы можете взять эту карту только на 6 ходу и не раньше.",
+        description: "Вы можете взять эту карту только на 6 ходу, и не раньше.",
         cost: 6,
         power: 9
       },
@@ -114,9 +114,183 @@ export default createStore({
       },
       {
         name: "black-widow",
-        description: "При раскрытии: Противник получает Укус вдовы в свою руку.",
+        description: "При раскрытии: Противник получает 'Укус вдовы' в свою руку.",
         cost: 2,
         power: 1
+      },
+      {
+        name: "blade",
+        description: "При раскрытии: Вы сбрасываете случайную карту из руки.",
+        cost: 1,
+        power: 3
+      },
+      {
+        name: "blue-marvel",
+        description: "Продолжительный эффект: Все другие карты имеют +1 силы.",
+        cost: 5,
+        power: 3
+      },
+      {
+        name: "brood",
+        description: "При раскрытии: Призывает 2 выводка с такой же силой.",
+        cost: 3,
+        power: 2
+      },
+      {
+        name: "bucky-barnes",
+        description: "При уничтожении: Добавляет 'Зимнего солдата' с силой 6 в эту локацию.",
+        cost: 2,
+        power: 1
+      },
+      {
+        name: "cable",
+        description: "При раскрытии: Вы кладете в руку нижнюю карту колоды противника.",
+        cost: 2,
+        power: 2
+      },
+      {
+        name: "captain-america",
+        description: "Продолжительный эффект: Другие карты в этой локации имеют +1 силы.",
+        cost: 3,
+        power: 3
+      },
+      {
+        name: "carnage",
+        description: "При раскрытии: Уничтожает все карты в этой локации и получает +2 к силе за каждую уничтоженную.",
+        cost: 2,
+        power: 2
+      },
+      {
+        name: "cerebro",
+        description: "Продолжительный эффект: Ваши карты с наибольшей силой имеют +2 силы.",
+        cost: 3,
+        power: 0
+      },
+      {
+        name: "cloak",
+        description: "При раскрытии: На следующем ходу в эту локацию можно перемещать карты.",
+        cost: 2,
+        power: 4
+      },
+      {
+        name: "colleen-wing",
+        description: "При раскрытии: Вы сбрасываете карту с наименьшей стоимостью из своей руки.",
+        cost: 2,
+        power: 4
+      },
+      {
+        name: "colossus",
+        description: "Продолжительный эффект: Эту карту нельзя переместить, уничтожить и изменить ее силу.",
+        cost: 2,
+        power: 3
+      },
+      {
+        name: "cosmo",
+        description: "Продолжительный эффект: В этой локации не срабатывают эффекты 'При раскрытии'.",
+        cost: 3,
+        power: 3
+      },
+      {
+        name: "crossbones",
+        description: "Эту карту можно играть только в локации, где вы выигрываете.",
+        cost: 4,
+        power: 8
+      },
+      {
+        name: "crystal",
+        description: "При раскрытии: Если эта локация средняя, вы замешиваете карты из своей руки в колоду и берете 3 карты.",
+        cost: 4,
+        power: 4
+      },
+      {
+        name: "cyclops",
+        description: "Вперед, Люди икс!",
+        cost: 3,
+        power: 4
+      },
+      {
+        name: "dagger",
+        description: "При перемещении получает +2 к силе за каждую карту противника в этой локации.",
+        cost: 2,
+        power: 1
+      },
+      {
+        name: "daredevil",
+        description: "На 5 ходу вы можете видеть ход противника, прежде чем сделать свой.",
+        cost: 2,
+        power: 2
+      },
+      {
+        name: "deadpool",
+        description: "При уничтожении: Удваивает свою силу и возвращается в вашу руку.",
+        cost: 1,
+        power: 1
+      },
+      {
+        name: "death",
+        description: "Стоит на 1 меньше за каждую уничтоженную карту.",
+        cost: 9,
+        power: 12
+      },
+      {
+        name: "deathlok",
+        description: "При раскрытии: Уничтожает все ваши карты в этой локации.",
+        cost: 3,
+        power: 5
+      },
+      {
+        name: "debrii",
+        description: "При раскрытии: Добавляет 'камень' в каждую другую локацию.",
+        cost: 3,
+        power: 3
+      },
+      {
+        name: "destroyer",
+        description: "При раскрытии: Уничтожает все ваши карты.",
+        cost: 6,
+        power: 16
+      },
+      {
+        name: "devil-dinosaur",
+        description: "Продолжительный эффект: Имеет +2 силы за каждую карту в вашей руке.",
+        cost: 5,
+        power: 3
+      },
+      {
+        name: "doctor-doom",
+        description: "При раскрытии: Добавляет на вашу сторону 'думбота' с силой 5 в каждую локацию.",
+        cost: 6,
+        power: 5
+      },
+      {
+        name: "doctor-octopus",
+        description: "При раскрытии: Вытягивает все карты из руки противника в эту локацию.",
+        cost: 5,
+        power: 10
+      },
+      {
+        name: "doctor-strange",
+        description: "При раскрытии: Перемещает в эту локацию карты с наибольшей силой.",
+        cost: 3,
+        power: 3
+      },
+      {
+        name: "domino",
+        description: "Вы можете взять эту карту только на 2 ходу, и не раньше.",
+        cost: 2,
+        power: 3
+      },
+      {
+        name: "dracula",
+        description: "В конце матча вы сбрасываете карты из своей руки. Получает силу сброшенной карты.",
+        cost: 4,
+        power: 0
+      },
+      {
+        name: "drax",
+        description: "При раскрытии: Если на этом ходу противник разыграл карту в этой локации, получает +4 силы.",
+        cost: 4,
+        power: 4
       },
     ],
       unreleased: [
