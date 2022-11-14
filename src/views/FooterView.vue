@@ -13,8 +13,8 @@ export default {
 <style scoped lang="scss">
 .footer {
   width: 100%;
-  color: rgb(0, 0, 0);
-  background: wheat;
+  color: rgb(255, 255, 255);
+  background: rgb(17, 17, 16);
   height: 3rem;
   margin-top: 1rem;
   //   position: absolute;

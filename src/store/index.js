@@ -419,6 +419,12 @@ export default createStore({
         power: 4
       },
       {
+        name: "hulk",
+        description: "ХАЛК КРУШИТЬ!",
+        cost: 6,
+        power: 12
+      },
+      {
         name: "human-torch",
         description: "При перемещении удваивает свою силу.",
         cost: 1,
@@ -437,6 +443,18 @@ export default createStore({
           description: "On Reveal: If the last card you played has an On Reveal ability, this card copies it.",
           cost: 4,
           power: 3
+        },
+        {
+          name: "thanos",
+          description: "Описание для таноса",
+          cost: 1,
+          power: 2
+        },
+        {
+          name: "galactus",
+          description: "Описание для Галактуса",
+          cost: 1,
+          power: 2
         },
       ]
     }
