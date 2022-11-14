@@ -292,6 +292,72 @@ export default createStore({
         cost: 4,
         power: 4
       },
+      {
+        name: "ebony-maw",
+        description: "Тест",
+        cost: 1,
+        power: 7
+      },
+      {
+        name: "electro",
+        description: "Tecт",
+        cost: 3,
+        power: 2
+      },
+      {
+        name: "elektra",
+        description: "При раскрытии: Уничтожает карту противника со стоимостью 1 в этой локации.",
+        cost: 1,
+        power: 1
+      },
+      {
+        name: "enchantress",
+        description: "При раскрытии: Удаляет все 'Продолжительные эффекты' у карт в этой локации.",
+        cost: 4,
+        power: 4
+      },
+      {
+        name: "falcon",
+        description: "При раскрытии: Возвращает в вашу руку все ваши карты со стоимостью 1.",
+        cost: 2,
+        power: 3
+      },
+      {
+        name: "forge",
+        description: "При раскрытии: Следующая разыгранная вами карта получит +2 к силе.",
+        cost: 2,
+        power: 1
+      },
+      {
+        name: "galactus",
+        description: "При раскрытии: Если эта карта единственная в этой локации, уничтожает другие локации.",
+        cost: 6,
+        power: 3
+      },
+      {
+        name: "gambit",
+        description: "При раскрытии: Вы сбрасываете случайную карту из своей руки. Уничтожает случайную карту противника.",
+        cost: 3,
+        power: 1
+      },
+      {
+        name: "gamora",
+        description: "При раскрытии: Если на этом ходу противник разыграл карту в этой локации, получает +5 силы.",
+        cost: 5,
+        power: 7
+      },
+      {
+        name: "ghost-rider",
+        description: "При раскрытии: Возвращает одну из сброшенных карт в эту локацию.",
+        cost: 4,
+        power: 3
+      },
+      {
+        name: "giganto",
+        description: "Эту карту можно играть только в левую локацию.",
+        cost: 6,
+        power: 14
+      },
     ],
       unreleased: [
         {
