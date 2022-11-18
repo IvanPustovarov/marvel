@@ -1,7 +1,7 @@
 <template>
   <div class="container-result">
     <div class="search-result" v-if="names.length || descriptions.length">
-      <div class="results descriptions">
+      <div class="results descriptions" v-if="descriptions.length">
         <div v-for="item in descriptions"
             :key="item.name"
             @click="goToCard(item.name)"
@@ -10,7 +10,7 @@
             <p>{{item.description}}</p>
         </div>
       </div>
-      <div class="results names">
+      <div class="results names" v-if="names.length">
         <div v-for="item in names"
             :key="item.name"
             @click="goToCard(item.name)"
@@ -49,6 +49,7 @@ export default {
   },
   methods: {
     goToCard(value) {
+      this.$emit('search');
       return this.$router.push(`/card/${value}`);
     },
   },
@@ -69,7 +70,6 @@ export default {
         flex-direction: column;
         position: relative;
         z-index: 1;
-
         .results{
             position: absolute;
             background: linear-gradient(
@@ -100,6 +100,14 @@ export default {
                   background-size: 400% 400%;
                 }
             }
+        }
+        .descriptions{
+            height: 20rem;
+            overflow-y: scroll;
+        }
+        .names{
+            height: 15rem;
+            overflow-y: scroll;
         }
     }
 }

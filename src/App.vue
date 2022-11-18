@@ -29,6 +29,7 @@ body {
   display: flex;
   justify-content: center;
   background: center repeat url("./assets/back.jpg");
+  flex-direction: column;
 }
 
 .container {
@@ -36,5 +37,22 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100%;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(
+      180deg,
+      rgba(23, 12, 40, 0.9),
+      rgb(24, 15, 46)
+      );
+  background-size: 400% 400%;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 15px rgba(255, 255, 255);
+  border-radius: 2px;
 }
 </style>

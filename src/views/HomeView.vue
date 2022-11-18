@@ -20,7 +20,7 @@ export default {
   background-color: rgb(209, 241, 241);
   flex-direction: row;
   display: flex;
-  width: 100vw;
+  width: 100%;
   .left-nav {
     flex: 1;
     margin: 0.5rem 0 0.5rem 0.5rem;

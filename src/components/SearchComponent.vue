@@ -2,17 +2,29 @@
   <div class="container">
     <div class="search">
       <input type="text" v-model="search"/>
-      <button @click="handleSearch" :disabled="!search.length">поиск</button>
+      <div class="settings">
+       <img :src="SettingsLogo" alt="">
+      </div>
     </div>
-    <SearchResult :names="names" :descriptions="descriptions"/>
+    <SearchResult @search="cleanSearch" :names="names" :descriptions="descriptions"/>
   </div>
 </template>
 
 <script>
 import SearchResult from './SearchResult.vue';
+import SettingsLogo from "@/assets/settings.svg";
 export default {
   name: "SearchComponent",
-  components: {SearchResult},
+  components: {
+    SearchResult,
+    // eslint-disable-next-line vue/no-unused-components
+    SettingsLogo
+  },
+  setup() {
+      return {
+        SettingsLogo
+      };
+  },
   props: {},
   data() {
     return {
@@ -21,9 +33,10 @@ export default {
       descriptions: []
     };
   },
-  methods: {
-    handleSearch () {
-      const lowerName = this.search.toLowerCase();
+  watch: {
+    search(value) {
+      if(value.length) {
+        const lowerName = this.search.toLowerCase();
       if (lowerName.length) {
         this.names = this.cards.released.filter((card) => card.name.includes(lowerName));
       }
@@ -39,6 +52,16 @@ export default {
       if (lowerDescription.length) {
         this.descriptions = lowerDescriptionsArray.filter((card) => card.description.includes(lowerDescription));
       }
+      }
+      if(!value.length) {
+        this.names = [];
+        this.descriptions = [];
+      }
+    }
+  },
+  methods: {
+    cleanSearch() {
+      this.search = "";
     }
   },
   computed: {
@@ -78,22 +101,13 @@ export default {
         outline: none;
       }
     }
-    button{
-      height: 2rem;
-      border: none;
-      background: wheat;
-      width: 5rem;
-      cursor: pointer;
-      border-radius: 3px;
-      background: linear-gradient(
-            180deg,
-            rgba(128, 70, 222, 0.9),
-            rgb(35, 14, 83)
-          );
-      background-size: 400% 400%;
-      color: white;
-      &:disabled {
-        background: gray;
+    .settings{
+      background: white;
+      border-radius: 5px;
+      padding: 1px 2px 1px 2px;
+      img{
+        width: 30px;
+        height: 30px;
       }
     }
   }
