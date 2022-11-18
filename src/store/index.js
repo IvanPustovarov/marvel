@@ -6,7 +6,7 @@ export default createStore({
       released: [
       {
         name: "abomination",
-        description: "Глупый сброд! Ты ниже меня!",
+        description: "Глупый сброд! Вы ниже меня!",
         cost: 5,
         power: 9
       },
@@ -327,12 +327,6 @@ export default createStore({
         description: "При раскрытии: Следующая разыгранная вами карта получит +2 к силе.",
         cost: 2,
         power: 1
-      },
-      {
-        name: "galactus",
-        description: "При раскрытии: Если эта карта единственная в этой локации, уничтожает другие локации.",
-        cost: 6,
-        power: 3
       },
       {
         name: "gambit",

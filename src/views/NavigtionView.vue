@@ -17,15 +17,17 @@
           <router-link to="/locations">Локации</router-link>
         </div>
       </div>
+      <SearchComponent />
     </nav>
     <div class="br"></div>
   </div>
 </template>
 
 <script>
+import SearchComponent from "@/components/SearchComponent.vue";
 export default {
   name: "NavigationView",
-  components: {},
+  components: { SearchComponent },
 };
 </script>
 
@@ -33,6 +35,8 @@ export default {
 <style scoped lang="scss">
 .nav-panel {
   width: 100%;
+  // align-items: stretch;
+  // display: flex;
   nav {
     background-color: rgb(27, 30, 41);
     display: flex;
@@ -88,13 +92,14 @@ export default {
       }
     }
   }
-}
-.br {
+  .br {
   height: 0.7rem;
   background: linear-gradient(-45deg, #ed193b, #a98055, #f286e2, #681d7a);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
 }
+}
+
 
 @keyframes gradient {
   0% {

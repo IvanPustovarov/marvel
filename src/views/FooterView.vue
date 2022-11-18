@@ -17,7 +17,5 @@ export default {
   background: rgb(17, 17, 16);
   height: 3rem;
   margin-top: 1rem;
-  //   position: absolute;
-  //   bottom: 0px;
 }
 </style>

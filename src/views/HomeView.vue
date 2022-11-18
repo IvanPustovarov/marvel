@@ -1,11 +1,9 @@
 <template>
   <div class="container">
     <div class="left-nav">
-      <h1 class="title">Go to:</h1>
-      <router-link to="/cards">Cards</router-link> |
-      <router-link to="/locations">Locations</router-link>
+      <p>Some text here</p>
     </div>
-    <div class="right-contant">Right</div>
+    <div class="right-contant"></div>
   </div>
 </template>
 
