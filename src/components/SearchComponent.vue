@@ -2,23 +2,26 @@
   <div class="container">
     <div class="search">
       <input type="text" v-model="search"/>
-      <div class="settings">
-       <img :src="SettingsLogo" alt="">
+      <div class="settings" @click="openSetting">
+        <img :src="SettingsLogo" alt="setting">
       </div>
     </div>
     <SearchResult @search="cleanSearch" :names="names" :descriptions="descriptions"/>
+    <SettingsComponent @show="openSetting" v-if="isShowSetting"/>
   </div>
 </template>
 
 <script>
 import SearchResult from './SearchResult.vue';
 import SettingsLogo from "@/assets/settings.svg";
+import SettingsComponent from './SettingsComponent.vue';
 export default {
   name: "SearchComponent",
   components: {
     SearchResult,
     // eslint-disable-next-line vue/no-unused-components
-    SettingsLogo
+    SettingsLogo,
+    SettingsComponent
   },
   setup() {
       return {
@@ -30,7 +33,8 @@ export default {
     return {
       search: "",
       names: [],
-      descriptions: []
+      descriptions: [],
+      isShowSetting: false,
     };
   },
   watch: {
@@ -62,7 +66,10 @@ export default {
   methods: {
     cleanSearch() {
       this.search = "";
-    }
+    },
+    openSetting() {
+      this.isShowSetting = !this.isShowSetting;
+    },
   },
   computed: {
     cards() {
@@ -102,12 +109,12 @@ export default {
       }
     }
     .settings{
-      background: white;
-      border-radius: 5px;
+      cursor: pointer;
       padding: 1px 2px 1px 2px;
       img{
         width: 30px;
         height: 30px;
+        filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(-140deg) brightness(87%) contrast(119%);
       }
     }
   }

@@ -8,19 +8,35 @@ export default createStore({
         name: "abomination",
         description: "Глупый сброд! Вы ниже меня!",
         cost: 5,
-        power: 9
+        power: 9,
+        pool: 0, // 0 -- стартовый пул, 1 -- уровни 1-14, 2- первый пул, 3 -- второй пул, 4 -- третий пул.
+        onReveal: false, // true, false
+        ongoing: false, // true, false
+        move: false, // true, false
+        destroy: false, // true, false
+        noAbility: true, // true, false
+        draw: false // true, false
       },
       {
         name: "adam-warlock",
         description: "Если в конце хода вы выигрываете в этой локации, вы берете карту.",
         cost: 2,
-        power: 0
+        power: 0,
+        pool: 4,
+        onReveal: false,
+        ongoing: false,
+        move: false,
+        destroy: false,
+        noAbility: false,
+        draw: true,
       },
       {
         name: "aero",
         description: "При раскрытии: Перемещает в эту локацию карты, сыгранные противником на этом ходу.",
         cost: 5,
-        power: 8
+        power: 8,
+        onReveal: true,
+        move: true,
       },
       {
         name: "agatha-harkness",
