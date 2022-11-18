@@ -14,7 +14,7 @@ export default createStore({
         ongoing: false, // true, false
         move: false, // true, false
         destroy: false, // true, false
-        noAbility: true, // true, false
+        noAbility: true, // true, false в
         draw: false // true, false
       },
       {
