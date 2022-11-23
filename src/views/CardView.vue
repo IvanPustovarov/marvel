@@ -13,7 +13,7 @@
           <div class="power">{{ card.power }}</div>
         </div>
         <div>
-          :
+          Статус:
           <div>В релизе</div>
         </div>
       </div>
