@@ -17,7 +17,6 @@ jobs:
           node-version: 18.x
           cache: npm
       - run: npm ci
-      - run: export PUBLIC_URL=$(echo $GITHUB_REPOSITORY | sed -r 's/\//.github.io\//;s/^/https:\/\//;s/$/\//') && npm run build --if-present
       # - run: npm test
       - name: Setup Pages
         uses: actions/configure-pages@v2
