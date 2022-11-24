@@ -24,10 +24,10 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v0
         with:
-          path: "build"
+          path: "dist"
 
   deploy:
-    needs: build
+    needs: dist
     permissions:
       pages: write
       id-token: write
