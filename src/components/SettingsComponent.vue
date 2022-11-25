@@ -45,8 +45,8 @@ export default {
     background: white;
     border-radius: 5px;
     position: absolute;
-    top: 0;
-    left: 20rem;
+    top: 3rem;
+    left: 31rem;
     z-index: 2;
     .close{
         align-self: flex-end;

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="search">
-      <input type="text" v-model="search"/>
+      <input type="text" v-model="search" placeholder="Поиск"/>
       <div class="settings" @click="openSetting">
         <img :src="SettingsLogo" alt="setting">
       </div>
@@ -104,9 +104,14 @@ export default {
           );
       background-size: 400% 400%;
       color: white;
+      width: 30rem;
       &:focus{
         outline: none;
       }
+      &::placeholder {
+          color: rgb(153, 151, 170);
+          letter-spacing: -1.5px;
+        }
     }
     .settings{
       cursor: pointer;
