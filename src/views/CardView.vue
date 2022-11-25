@@ -48,7 +48,6 @@ export default {
 
 <style scoped lang="scss">
 .container {
-  //width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
