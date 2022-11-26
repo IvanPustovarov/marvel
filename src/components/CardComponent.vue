@@ -1,5 +1,5 @@
 <template>
-  <div class="container" @click="goToCard">
+  <div class="container-of-card" @click="goToCard">
     <div class="card">
       <img
         :src="require(`@/assets/cards/${name}.webp`)"
@@ -100,7 +100,7 @@ export default {
 
 
 <style scoped lang="scss">
-.container {
+.container-of-card {
   cursor: pointer;
   height: 24rem;
   display: flex;

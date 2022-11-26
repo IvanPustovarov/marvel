@@ -15,7 +15,7 @@ export default {
   width: 100%;
   color: rgb(255, 255, 255);
   background: rgb(17, 17, 16);
-  height: 3rem;
+  min-height: 3rem;
   margin-top: 1rem;
 }
 </style>

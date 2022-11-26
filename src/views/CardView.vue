@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-card">
     <div class="card">
       <img :src="require(`@/assets/cards/${card.name}.webp`)" alt="" />
       <div class="info">
@@ -47,10 +47,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.container {
+.container-card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex: 1;
   .card {
     display: flex;
     align-items: flex-start;

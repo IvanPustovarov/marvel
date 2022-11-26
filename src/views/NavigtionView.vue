@@ -35,6 +35,7 @@ export default {
 <style scoped lang="scss">
 .nav-panel {
   width: 100%;
+  min-height: 5rem;
   nav {
     background-color: rgb(27, 30, 41);
     display: flex;

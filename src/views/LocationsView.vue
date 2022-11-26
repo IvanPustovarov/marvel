@@ -1,5 +1,5 @@
 <template>
-  <div class="container">Location</div>
+  <div class="container-location">Location</div>
 </template>
 
 
@@ -11,7 +11,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.container {
+.container-location {
+  flex: 1;
   width: 100vw;
 }
 </style>

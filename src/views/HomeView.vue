@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-home">
     <div class="left-nav item-main">
       <div class="first-polygon polygon"></div>
       <div class="second-polygon polygon"></div>
@@ -31,7 +31,8 @@ export default {
 
 
 <style scoped lang="scss">
-.container {
+.container-home {
+  flex: 1;
   margin-top: 1rem;
   flex-direction: row;
   display: flex;
@@ -39,7 +40,6 @@ export default {
   width: 95%;
   .left-nav {
     flex: 1;
-    margin: 0.5rem 0 0.5rem 0.5rem;
     .polygon{
       background: inherit;
       position: absolute;

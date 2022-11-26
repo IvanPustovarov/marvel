@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-search">
     <div class="search">
       <input type="text" v-model="search" placeholder="Поиск"/>
       <div class="settings" @click="openSetting">
@@ -81,8 +81,7 @@ export default {
 
 
 <style scoped lang="scss">
-.container {
-  margin: 1.5rem 0 0 1rem;
+.container-search {
   display: flex;
   justify-content: center;
   position: relative;

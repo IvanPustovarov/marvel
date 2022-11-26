@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-cards">
     <CardComponent
       v-for="card in cards.released"
       :key="card.name"
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.container {
+.container-cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
