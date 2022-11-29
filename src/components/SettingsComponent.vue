@@ -45,7 +45,7 @@ export default {
     background: white;
     border-radius: 5px;
     position: absolute;
-    top: 3rem;
+    top: 4rem;
     left: 31rem;
     z-index: 2;
     .close{

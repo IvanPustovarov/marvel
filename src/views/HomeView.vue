@@ -1,31 +1,60 @@
 <template>
   <div class="container-home">
     <div class="left-nav item-main">
-      <div class="first-polygon polygon"></div>
-      <div class="second-polygon polygon"></div>
-      <div class="third-polygon polygon"></div>
+      <MainLeftPolygons/>
       <h1><pre>Про наш чудесный сайт
         по игре "Марвел Снап"</pre></h1>
       <pre>
         Здесь я расскажу подробнее про сайт и что мы будет тут показывать.
 
-      Наш сайт очень классный. Очень. Реально очень. И это не пост-ирония.
+      Наш сайт очень классный. Очень. Реально очень.
+      И это не пост-ирония.
+      Очень много текста, чтобы блок стал длинее вниз.
+
+      вот ещё пару отступов.
+      и ещё чуть-чуть
+
+      а если без прикола, то этот блок создан,
+      чтобы потренить clip-path: polygon
+
+      вот эти штуки по краям должны создать эффект нелинейности
+
+
+      где-то плюс минус вот такой высоты будет блок.
       </pre>
     </div>
-    <div class="right-contant item-main">
+    <div class="right-content item-main">
+      <MainRightPolygons/>
        <pre>
 
   Ничем непримечательный контент справа, который
   пока что не заполнен.
+
+  Пришло время заполнить контент, чтобы понять
+  какой высоты он будет.
+
+  В зыбкой хляби болот
+  Тонет тихо душа забытая
+  Подле леса щедрот
+  Еле теплится жизнь разбитая.
+
+  Ничего не поделать :3 люблю драм-and-bass
+
+  О, может кружки какие-то влепить ?
+  а не только треугольники
+
+  ещё пару строк для высоты
       </pre>
     </div>
   </div>
 </template>
 
 <script>
+import MainLeftPolygons from '@/components/polygons/MainLeftPolygons.vue';
+import MainRightPolygons from '@/components/polygons/MainRightPolygons.vue';
 export default {
   name: "HomeView",
-  components: {},
+  components: {MainLeftPolygons, MainRightPolygons},
 };
 </script>
 
@@ -38,37 +67,8 @@ export default {
   display: flex;
   align-items: flex-start;
   width: 95%;
+  justify-content: space-between;
   .left-nav {
-    flex: 1;
-    .polygon{
-      background: inherit;
-      position: absolute;
-      z-index: 0;
-      box-shadow: 0px 0px 78px 5px rgba(255, 255, 255, 0.5);
-    }
-    .first-polygon{
-      top: -10px;
-      left: -12px;
-      width: 50px;
-      height: 50px;
-      clip-path: polygon(0% 0%, 100% 19%, 29% 100%, 0 0%); // TODO: backgdoung-gradient
-    }
-    .second-polygon{
-      top: 46px;
-      left: -24px;
-      width: 87px;
-      height: 100px;
-      -webkit-clip-path: polygon(32% 29%, 84% 25%, 32% 100%, 4% 72%);
-      clip-path: polygon(32% 29%, 84% 25%, 32% 100%, 4% 72%);
-    }
-    .third-polygon{
-      top: 148px;
-      left: -51px;
-      width: 87px;
-      height: 40px;
-      -webkit-clip-path: polygon(70% 1%, 100% 51%, 7% 107%, 29% 72%);
-      clip-path: polygon(70% 1%, 100% 51%, 7% 107%, 29% 72%);
-    }
     .title {
       height: 5rem;
     }
@@ -76,13 +76,12 @@ export default {
       margin: 1rem 0 0 1rem;
     }
   }
-  .right-contant {
+  .right-content {
     margin-left: 1rem;
   }
   .item-main{
     position: relative;
     border-radius: 3px;
-    flex: 1;
     color: white;
     background: rgb(0, 0, 0);
     box-shadow: inset 0px 0px 11px 1px rgba(255, 255, 255, 0.5),

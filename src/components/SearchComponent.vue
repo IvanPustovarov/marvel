@@ -85,6 +85,7 @@ export default {
   display: flex;
   justify-content: center;
   position: relative;
+  margin-left: 2rem;
   .search{
     display: flex;
     align-items: center;
