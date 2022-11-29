@@ -54,7 +54,16 @@ import MainLeftPolygons from '@/components/polygons/MainLeftPolygons.vue';
 import MainRightPolygons from '@/components/polygons/MainRightPolygons.vue';
 export default {
   name: "HomeView",
-  components: {MainLeftPolygons, MainRightPolygons},
+  components: {
+    MainLeftPolygons,
+    MainRightPolygons
+  },
+  data() {
+    return {
+    };
+  },
+  methods: {
+  }
 };
 </script>
 
@@ -83,15 +92,15 @@ export default {
     position: relative;
     border-radius: 3px;
     color: white;
-    background: rgb(0, 0, 0);
-    box-shadow: inset 0px 0px 11px 1px rgba(255, 255, 255, 0.5),
-                      0px 0px 78px 5px rgba(255, 255, 255, 0.5);
+    background-color: rgb(0, 0, 0);
+    transition: color 0.5s, background-color 0.5s, transform 0.5s, box-shadow 0.5s;
     &:hover{
       color: black;
-      background: white;
+      background-color: white;
       transform: perspective(1000px) rotateX(0deg) rotateY(0deg)
                  scale3d(1.035, 1.035, 1.035);
-      transition: 0.5s ease-in-out 0.5s;
+      box-shadow: inset 0px 0px 11px 1px rgba(255, 255, 255, 0.5),
+                      0px 0px 78px 5px rgba(255, 255, 255, 0.5);
     }
   }
 }

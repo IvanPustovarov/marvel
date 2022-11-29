@@ -6,6 +6,7 @@
     <div class="fourth-polygon polygon"></div>
     <div class="fifth-polygon polygon"></div>
     <div class="sixth-polygon polygon"></div>
+    <div class="seventh-polygon polygon"></div>
   </div>
 </template>
 
@@ -13,6 +14,10 @@
 export default {
   name: "MainLeftPolygons",
   components: {},
+  data() {
+    return {
+    };
+  },
 };
 </script>
 
@@ -23,9 +28,10 @@ export default {
       background: pink;
       position: absolute;
       z-index: 0;
-      box-shadow: 0px 0px 78px 5px rgba(255, 255, 255, 0.5);
+      transition: all 0.5s ease-out;
     }
     .first-polygon{
+      display: unset;
       top: -10px;
       left: -12px;
       width: 100px;
@@ -72,6 +78,14 @@ export default {
       height: 120px;
       -webkit-clip-path: polygon(0% 15%, 100% 100%, 39% 82%, 0% 99%);
       clip-path: polygon(0% 24%, 31% 6%, 76% 100%, 0% 99%);
+    }
+    .seventh-polygon{
+      top: 371px;
+      left: 672px;
+      width: 113px;
+      height: 54px;
+      -webkit-clip-path: polygon(0% 15%, 100% 100%, 39% 82%, 0% 99%);
+      clip-path: polygon(0% 24%, 106% -14%, 22% 100%, 0% 99%);
     }
 }
 </style>
