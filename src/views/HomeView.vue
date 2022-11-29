@@ -2,10 +2,10 @@
   <div class="container-home">
     <div class="left-nav item-main">
       <MainLeftPolygons/>
-      <h1><pre>Про наш чудесный сайт
-        по игре "Марвел Снап"</pre></h1>
+      <h1><pre> Про наш чудесный сайт
+ по игре "Марвел Снап"</pre></h1>
       <pre>
-        Здесь я расскажу подробнее про сайт и что мы будет тут показывать.
+      Здесь я расскажу подробнее про сайт и что мы будет тут показывать.
 
       Наш сайт очень классный. Очень. Реально очень.
       И это не пост-ирония.
@@ -76,7 +76,7 @@ export default {
   display: flex;
   align-items: flex-start;
   width: 95%;
-  gap: 100px;
+  gap: 110px;
   .left-nav {
     .title {
       height: 5rem;

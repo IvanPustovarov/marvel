@@ -1,8 +1,5 @@
 <template>
   <div class="polygon-container">
-    <div class="first-polygon polygon"></div>
-    <div class="second-polygon polygon"></div>
-    <div class="third-polygon polygon"></div>
     <div class="fourth-polygon polygon"></div>
     <div class="fifth-polygon polygon"></div>
     <div class="sixth-polygon polygon"></div>
@@ -25,35 +22,9 @@ export default {
 <style scoped lang="scss">
 .polygon-container{
     .polygon{
-      background: pink;
+      background: linear-gradient(90deg, #000000, #78687c);
+      background-size: 100% 100%;
       position: absolute;
-      z-index: 0;
-      transition: all 0.5s ease-out;
-    }
-    .first-polygon{
-      display: unset;
-      top: -10px;
-      left: -12px;
-      width: 100px;
-      height: 50px;
-      -webkit-clip-path: polygon(0% 0%, 100% 19%, 29% 100%, 0 0%);
-      clip-path: polygon(0% 0%, 100% 19%, 29% 100%, 0 0%); // TODO: backgdoung-gradient
-    }
-    .second-polygon{
-      top: 139px;
-      left: -16px;
-      width: 87px;
-      height: 140px;
-      -webkit-clip-path: polygon(24% 1%, 82% 62%, 67% 100%, 1% 91%);
-      clip-path: polygon(24% 1%, 82% 62%, 67% 100%, 1% 91%);
-    }
-    .third-polygon{
-      top: 370px;
-      left: -66px;
-      width: 138px;
-      height: 97px;
-      -webkit-clip-path: polygon(32% 0%, 100% 42%, 54% 57%, 44% 99%);
-      clip-path: polygon(32% 0%, 100% 42%, 54% 57%, 44% 99%);
     }
     .fourth-polygon{
       top: -21px;

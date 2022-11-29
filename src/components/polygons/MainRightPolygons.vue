@@ -3,6 +3,7 @@
     <div class="first-polygon polygon"></div>
     <div class="second-polygon polygon"></div>
     <div class="third-polygon polygon"></div>
+    <div class="fourth-polygon polygon"></div>
   </div>
 </template>
 
@@ -17,10 +18,9 @@ export default {
 <style scoped lang="scss">
 .polygon-container{
     .polygon{
-      background: pink;
+      background: linear-gradient(-90deg, #000000, #78687c);
+      background-size: 100% 100%;
       position: absolute;
-      z-index: 0;
-      box-shadow: 0px 0px 78px 5px rgba(255, 255, 255, 0.5);
     }
     .first-polygon{
       top: 72px;
@@ -45,6 +45,14 @@ export default {
       height: 97px;
       -webkit-clip-path: polygon(0% 0%, 100% 19%, 29% 100%, 0 0%);
       clip-path: polygon(78% 5%, 75% 80%, 0% 100%, 68% 0%);
+    }
+    .fourth-polygon{
+      top: 11px;
+      left: -70px;
+      width: 150px;
+      height: 59px;
+      -webkit-clip-path: polygon(0% 0%, 100% 19%, 29% 100%, 0 0%);
+      clip-path: polygon(91% 27%, 45% 70%, 46% 88%, 0% 0%);
     }
 }
 </style>
