@@ -67,7 +67,7 @@ export default {
   display: flex;
   align-items: flex-start;
   width: 95%;
-  justify-content: space-between;
+  gap: 100px;
   .left-nav {
     .title {
       height: 5rem;
