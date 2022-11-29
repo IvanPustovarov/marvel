@@ -32,5 +32,6 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 </style>

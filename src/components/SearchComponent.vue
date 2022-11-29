@@ -1,7 +1,7 @@
 <template>
   <div class="container-search">
     <div class="search">
-      <input type="text" v-model="search" placeholder="Поиск"/>
+      <input v-focus type="text" v-model="search" placeholder="Поиск"/>
       <div class="settings" @click="openSetting">
         <img :src="SettingsLogo" alt="setting">
       </div>
@@ -12,6 +12,10 @@
 </template>
 
 <script>
+const focus = {
+  mounted: (el) => el.focus()
+}
+
 import SearchResult from './SearchResult.vue';
 import SettingsLogo from "@/assets/settings.svg";
 import SettingsComponent from './SettingsComponent.vue';
@@ -22,6 +26,9 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     SettingsLogo,
     SettingsComponent
+  },
+  directives: {
+    focus
   },
   setup() {
       return {

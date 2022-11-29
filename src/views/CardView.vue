@@ -52,6 +52,7 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   flex: 1;
+  margin-top: 2rem;
   .card {
     display: flex;
     align-items: flex-start;
@@ -67,8 +68,11 @@ export default {
       padding: 1rem;
       background: black;
       color: white;
-      box-shadow: inset 0px 0px 17px 2px rgba(255, 255, 255, 0.5),
+      transition: all ease-in-out 0.5s;
+      &:hover{
+         box-shadow: inset 0px 0px 17px 2px rgba(255, 255, 255, 0.5),
         0px 0px 49px 6px rgba(255, 255, 255, 0.5);
+      }
       .stats {
         display: flex;
         flex-direction: row;
@@ -150,6 +154,10 @@ export default {
     }
     img {
       width: 300px;
+      transition: all ease-in-out 0.5s;
+      &:hover{
+       transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1.1, 1.1, 1.1)
+      }
     }
   }
 }

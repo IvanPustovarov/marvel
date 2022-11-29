@@ -107,6 +107,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-content: flex-start;
+  margin: 1rem;
   .card {
     display: flex;
     align-items: center;
@@ -130,7 +131,7 @@ export default {
         color: black;
         background: white;
         outline: 4px solid black;
-        transition: all 0.5s ease-out;
+        transition: all 0.5s ease-in-out;
       }
     }
     img {
