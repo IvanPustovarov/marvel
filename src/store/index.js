@@ -2485,14 +2485,21 @@ export default createStore({
           discard: false
         },
       ]
-    }
+    },
+    filteredCards: []
   },
   getters: {
     getCards (state) {
       return state.cards;
+    },
+    getFilteredCards (state) {
+      return state.filteredCards;
     }
   },
   mutations: {
+    setFilteredCards (state, payload) {
+      state.filteredCards = payload;
+    },
   },
   actions: {
   },

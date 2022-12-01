@@ -1,7 +1,7 @@
 <template>
   <div class="container-cards">
     <CardComponent
-      v-for="card in cards.released"
+      v-for="card in cardsToRender"
       :key="card.name"
       :name="card.name"
       :description="card.description"
@@ -16,19 +16,35 @@ export default {
   name: "CardsPage",
   props: {},
   data() {
-    return {};
+    return {
+      cardsToRender: [],
+    };
   },
-  mounted() {},
+  mounted() {
+    this.cardsToRender = this.cards.released;
+  },
+  watch: {
+    cardsFiltered (value) {
+      this.cardsToRender = value;
+      if (!value.length) {
+        this.cardsToRender = this.cards.released
+      }
+    }
+  },
   computed: {
     cards() {
       return this.$store.getters.getCards;
     },
+    cardsFiltered () {
+      return this.$store.getters.getFilteredCards;
+    }
   },
 };
 </script>
 
 <style scoped lang="scss">
 .container-cards {
+  flex: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

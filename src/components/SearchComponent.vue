@@ -2,9 +2,12 @@
   <div class="container-search">
     <div class="search">
       <input v-focus type="text" v-model="search" placeholder="Поиск"/>
+      <button @click="setCardsFilter" :disabled="!isRelust" class="button-filter-cards button-top">поиск</button>
+      <button @click="resetCardsFilter" :disabled="!cardsFiltered.length" class="button-reset-cards button-top">сбросить фильтры</button>
       <div class="settings" @click="openSetting">
         <img :src="SettingsLogo" alt="setting">
       </div>
+
     </div>
     <SearchResult @search="cleanSearch" :names="names" :descriptions="descriptions"/>
     <SettingsComponent @show="openSetting" v-if="isShowSetting"/>
@@ -42,6 +45,7 @@ export default {
       names: [],
       descriptions: [],
       isShowSetting: false,
+      isRelust: false,
     };
   },
   watch: {
@@ -50,6 +54,7 @@ export default {
         const lowerName = this.search.toLowerCase();
       if (lowerName.length) {
         this.names = this.cards.released.filter((card) => card.name.includes(lowerName));
+        this.isRelust = true;
       }
 
       const lowerDescription = this.search.toLowerCase();
@@ -62,9 +67,11 @@ export default {
         }));
       if (lowerDescription.length) {
         this.descriptions = lowerDescriptionsArray.filter((card) => card.description.includes(lowerDescription));
+        this.isRelust = true;
       }
       }
       if(!value.length) {
+        this.isRelust = false;
         this.names = [];
         this.descriptions = [];
       }
@@ -77,11 +84,20 @@ export default {
     openSetting() {
       this.isShowSetting = !this.isShowSetting;
     },
+    setCardsFilter () {
+      this.$store.commit('setFilteredCards', this.names ? this.names : this.descriptions);
+    },
+    resetCardsFilter () {
+       this.$store.commit('setFilteredCards', []);
+    }
   },
   computed: {
     cards() {
       return this.$store.getters.getCards;
     },
+    cardsFiltered () {
+      return this.$store.getters.getFilteredCards;
+    }
   }
 };
 </script>
@@ -128,6 +144,31 @@ export default {
         height: 30px;
         filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(-140deg) brightness(87%) contrast(119%);
       }
+    }
+    .button-top{
+      border: none;
+      border-radius: 2px;
+      padding: 0 0.5rem 0 0.5rem;
+      color: white;
+      height: 2rem;
+      background: linear-gradient(
+      180deg,
+      rgba(128, 70, 222, 0.9),
+      rgb(35, 14, 83)
+      );
+      background-size: 400% 400%;
+      cursor: pointer;
+      margin-right: 1rem;
+      &:disabled{
+        color: black;
+        cursor: auto;
+      }
+    }
+    .button-filter-cards{
+    }
+    .button-reset-cards{
+      background: none;
+      background-color: rgb(233, 110, 110);
     }
   }
   .search-result{
