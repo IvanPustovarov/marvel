@@ -33,5 +33,6 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 2rem;
+  justify-content: center;
 }
 </style>

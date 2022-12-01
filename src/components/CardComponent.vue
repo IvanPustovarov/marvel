@@ -8,9 +8,7 @@
         @mousemove="mouseMove"
         @mouseleave="mouseLeave"
       />
-      <div class="description">
-        <span v-if="boldText">{{ boldText }}</span>
-        <p>{{ editDescription(description) }}</p>
+      <div v-html="editDescription(description)" class="description">
       </div>
     </div>
   </div>
@@ -26,29 +24,17 @@ export default {
   },
   data() {
     return {
-      boldText: "",
       rotateMoveX: null,
       rotateMoveY: null,
     };
   },
   methods: {
     editDescription() {
-      const effect = "Продолжительный эффект:";
-      const open = "При раскрытии:";
-      let newDescription;
-
-      const effectHave = this.description.includes(effect);
-      const openHave = this.description.includes(open);
-
-      if (effectHave) {
-        newDescription = this.description.slice(effect.length);
-        this.boldText = effect;
-      }
-      if (openHave) {
-        newDescription = this.description.slice(open.length);
-        this.boldText = open;
-      }
-      return newDescription ? newDescription : this.description;
+      const revealRe = /При раскрытии:/gi;
+      const ongoingRe = /Продолжительный эффект:/gi;
+      let newDescription = this.description.replace(revealRe, '<span class="span-ability">При раскрытии:</span>');
+      const result = newDescription.replace(ongoingRe, '<span class="span-ability">Продолжительный эффект:</span>');
+      return result;
     },
     goToCard() {
       return this.$router.push(`/card/${this.name}`);
@@ -139,4 +125,9 @@ export default {
     }
   }
 }
+
+::v-deep .span-ability {
+      font-size: 17px;
+      font-weight: 600;
+  }
 </style>

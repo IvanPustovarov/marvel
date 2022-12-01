@@ -678,7 +678,7 @@ export default createStore({
       },
       {
         name: "ebony-maw",
-        description: "Тест",
+        description: "Вы не можете разыграть эту карту после 3го хода. Продолжительный эффект: вы не можете играть карты в этой локации",
         cost: 1,
         power: 7,
         pool: 4,
@@ -692,7 +692,7 @@ export default createStore({
       },
       {
         name: "electro",
-        description: "Tecт",
+        description: "При раскрытии: Увеличивает вашу максимальную энергию на 1. Продолжительный эффект: вы можете играть только 1 карту в ход",
         cost: 3,
         power: 2,
         pool: 4,
@@ -1266,7 +1266,7 @@ export default createStore({
       },
       {
         name: "magik",
-        description: "Тест",
+        description: "Вы не можете играть эту карту на 6м ходу. При раскрытии: превращает эту локацию в Limbo",
         cost: 5,
         power: 3,
         pool: 4,

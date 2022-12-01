@@ -2,49 +2,12 @@
   <div class="container-home">
     <div class="left-nav item-main">
       <MainLeftPolygons/>
-      <h1><pre> Про наш чудесный сайт
- по игре "Марвел Снап"</pre></h1>
-      <pre>
-      Здесь я расскажу подробнее про сайт и что мы будет тут показывать.
-
-      Наш сайт очень классный. Очень. Реально очень.
-      И это не пост-ирония.
-      Очень много текста, чтобы блок стал длинее вниз.
-
-      вот ещё пару отступов.
-      и ещё чуть-чуть
-
-      а если без прикола, то этот блок создан,
-      чтобы потренить clip-path: polygon
-
-      вот эти штуки по краям должны создать эффект нелинейности
-
-
-      где-то плюс минус вот такой высоты будет блок.
-      </pre>
+      <h1>"Марвел Снап"</h1>
+      <p>Здесь вы можете посмотреть актуальные карты и локации по игре "Марвел Снап".</p>
     </div>
     <div class="right-content item-main">
       <MainRightPolygons/>
-       <pre>
-
-  Ничем непримечательный контент справа, который
-  пока что не заполнен.
-
-  Пришло время заполнить контент, чтобы понять
-  какой высоты он будет.
-
-  В зыбкой хляби болот
-  Тонет тихо душа забытая
-  Подле леса щедрот
-  Еле теплится жизнь разбитая.
-
-  Ничего не поделать :3 люблю драм-and-bass
-
-  О, может кружки какие-то влепить ?
-  а не только треугольники
-
-  ещё пару строк для высоты
-      </pre>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam temporibus voluptas porro possimus adipisci cum, nulla reiciendis consequuntur vel ipsam. Quia facere eius quidem voluptates optio recusandae eligendi enim qui.</p>
     </div>
   </div>
 </template>
@@ -78,14 +41,21 @@ export default {
   width: 95%;
   gap: 110px;
   .left-nav {
+    width: 42rem;
+    height: 27rem;
     .title {
       height: 5rem;
     }
     h1{
       margin: 1rem 0 0 1rem;
     }
+    p{
+      margin: 0 1rem 0 1rem;
+    }
   }
   .right-content {
+    height: 23rem;
+    width: 29rem;
     margin-left: 1rem;
   }
   .item-main{
