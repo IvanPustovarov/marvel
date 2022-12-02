@@ -2,21 +2,21 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    cards: {
-      released: [
+    cards: [
       {
         name: "abomination",
         description: "Глупый сброд! Вы ниже меня!",
         cost: 5,
         power: 9,
         pool: 0, // 0 -- стартовый пул, 1 -- уровни 1-14, 2- первый пул, 3 -- второй пул, 4 -- третий пул.
-        onReveal: false, // true, false
-        ongoing: false, // true, false
-        move: false, // true, false
-        destroy: false, // true, false
-        noAbility: true, // true, false
-        draw: false, // true, false
-        discard: false
+        onReveal: false,
+        ongoing: false,
+        move: false,
+        destroy: false,
+        noAbility: true,
+        draw: false,
+        discard: false,
+        release: true
       },
       {
         name: "adam-warlock",
@@ -30,7 +30,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: true,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "aero",
@@ -44,7 +45,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "agatha-harkness",
@@ -58,7 +60,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "agent-13",
@@ -72,7 +75,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "america-chavez",
@@ -86,7 +90,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "angel",
@@ -100,7 +105,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "angela",
@@ -114,7 +120,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "ant-man",
@@ -128,7 +135,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "apocalypse",
@@ -142,7 +150,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "armor",
@@ -156,7 +165,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "arnim-zola",
@@ -170,7 +180,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "baron-mordo",
@@ -184,7 +195,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "beast",
@@ -198,7 +210,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "bishop",
@@ -212,7 +225,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "black-bolt",
@@ -226,7 +240,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "black-cat",
@@ -240,7 +255,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "black-panther",
@@ -254,7 +270,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "black-widow",
@@ -268,7 +285,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "blade",
@@ -282,7 +300,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "blue-marvel",
@@ -296,7 +315,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "brood",
@@ -310,7 +330,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "bucky-barnes",
@@ -324,7 +345,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "cable",
@@ -338,7 +360,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "captain-america",
@@ -352,7 +375,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "carnage",
@@ -366,7 +390,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "cerebro",
@@ -380,7 +405,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "cloak",
@@ -394,7 +420,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "colleen-wing",
@@ -408,7 +435,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "colossus",
@@ -422,7 +450,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "cosmo",
@@ -436,7 +465,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "crossbones",
@@ -450,7 +480,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "crystal",
@@ -464,7 +495,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: true,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "cyclops",
@@ -478,7 +510,8 @@ export default createStore({
         destroy: false,
         noAbility: true,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "dagger",
@@ -492,7 +525,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "daredevil",
@@ -506,7 +540,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "deadpool",
@@ -520,7 +555,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "death",
@@ -534,7 +570,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "deathlok",
@@ -548,7 +585,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "debrii",
@@ -562,7 +600,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "destroyer",
@@ -576,7 +615,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "devil-dinosaur",
@@ -590,7 +630,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "doctor-doom",
@@ -604,7 +645,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "doctor-octopus",
@@ -618,7 +660,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "doctor-strange",
@@ -632,7 +675,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "domino",
@@ -646,7 +690,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "dracula",
@@ -660,7 +705,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "drax",
@@ -674,7 +720,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "ebony-maw",
@@ -688,7 +735,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "electro",
@@ -702,7 +750,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "elektra",
@@ -716,7 +765,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "enchantress",
@@ -730,7 +780,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "falcon",
@@ -744,7 +795,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "forge",
@@ -758,7 +810,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "gambit",
@@ -772,7 +825,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "gamora",
@@ -786,7 +840,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "ghost-rider",
@@ -800,7 +855,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "giganto",
@@ -814,7 +870,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "goose",
@@ -828,7 +885,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "green-goblin",
@@ -842,7 +900,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "groot",
@@ -856,7 +915,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "hawkeye",
@@ -870,7 +930,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "hazmat",
@@ -884,7 +945,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "heimdall",
@@ -898,7 +960,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "hela",
@@ -912,7 +975,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "hellcow",
@@ -926,7 +990,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "hobgoblin",
@@ -940,7 +1005,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "hulk-buster",
@@ -954,7 +1020,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "hulk",
@@ -968,7 +1035,8 @@ export default createStore({
         destroy: false,
         noAbility: true,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "human-torch",
@@ -982,7 +1050,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "iceman",
@@ -996,7 +1065,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "invisible-woman",
@@ -1010,7 +1080,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "iron-fist",
@@ -1024,7 +1095,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "iron-man",
@@ -1038,7 +1110,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "ironheart",
@@ -1052,7 +1125,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "jane-foster-mighty-thor",
@@ -1066,7 +1140,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: true,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "jessica-jones",
@@ -1080,7 +1155,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "jubilee",
@@ -1094,7 +1170,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "juggernaut",
@@ -1108,7 +1185,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "ka-zar",
@@ -1122,7 +1200,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "killmonger",
@@ -1136,7 +1215,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "kingpin",
@@ -1150,7 +1230,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "klaw",
@@ -1164,7 +1245,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "korg",
@@ -1178,7 +1260,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "kraven",
@@ -1192,7 +1275,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "lady-sif",
@@ -1206,7 +1290,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "leader",
@@ -1220,7 +1305,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "leech",
@@ -1234,7 +1320,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "lizard",
@@ -1248,7 +1335,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "lockjaw",
@@ -1262,7 +1350,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "magik",
@@ -1276,7 +1365,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "magneto",
@@ -1290,7 +1380,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "mantis",
@@ -1304,7 +1395,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "maximus",
@@ -1318,7 +1410,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: true,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "medusa",
@@ -1332,7 +1425,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "miles-morales",
@@ -1346,7 +1440,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "mister-fantastic",
@@ -1360,7 +1455,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "mister-negative",
@@ -1374,7 +1470,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "mister-sinister",
@@ -1388,7 +1485,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "misty-knight",
@@ -1402,7 +1500,8 @@ export default createStore({
         destroy: false,
         noAbility: true,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "mojo",
@@ -1416,7 +1515,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "moon-girl",
@@ -1430,7 +1530,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "moon-knight",
@@ -1444,7 +1545,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "morbius",
@@ -1458,7 +1560,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "morph",
@@ -1472,7 +1575,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "multiple-man",
@@ -1486,7 +1590,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "mysterio",
@@ -1500,7 +1605,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "mystique",
@@ -1514,7 +1620,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "nakia",
@@ -1528,7 +1635,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "namor",
@@ -1542,7 +1650,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "nick-fury",
@@ -1556,7 +1665,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "nightcrawler",
@@ -1570,7 +1680,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "nova",
@@ -1584,7 +1695,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "odin",
@@ -1598,7 +1710,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "okoye",
@@ -1612,7 +1725,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "omega-red",
@@ -1626,7 +1740,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "onslaught",
@@ -1640,7 +1755,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "patriot",
@@ -1654,7 +1770,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "polaris",
@@ -1668,7 +1785,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "professor-x",
@@ -1682,7 +1800,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "psylocke",
@@ -1696,7 +1815,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "punisher",
@@ -1710,7 +1830,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "quake",
@@ -1724,7 +1845,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "quicksilver",
@@ -1738,7 +1860,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "quinjet",
@@ -1752,7 +1875,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "red-skull",
@@ -1766,7 +1890,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "rescue",
@@ -1780,7 +1905,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "rhino",
@@ -1794,7 +1920,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "rocket-racoon",
@@ -1808,7 +1935,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "rockslide",
@@ -1822,7 +1950,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "rogue",
@@ -1836,7 +1965,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "ronan-the-accuser",
@@ -1850,7 +1980,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "sabretooth",
@@ -1864,7 +1995,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "sandman",
@@ -1878,7 +2010,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "scarlet-witch",
@@ -1892,7 +2025,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "scorpion",
@@ -1906,7 +2040,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "sentinel",
@@ -1920,7 +2055,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "sera",
@@ -1934,7 +2070,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "shang-chi",
@@ -1948,7 +2085,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "shocker",
@@ -1962,7 +2100,8 @@ export default createStore({
         destroy: false,
         noAbility: true,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "spectrum",
@@ -1976,7 +2115,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "spider-man",
@@ -1990,7 +2130,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "spider-woman",
@@ -2004,7 +2145,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "squirrel-girl",
@@ -2018,7 +2160,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "star-lord",
@@ -2032,7 +2175,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "storm",
@@ -2046,7 +2190,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "strong-guy",
@@ -2060,7 +2205,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "sunspot",
@@ -2074,7 +2220,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "swarm",
@@ -2088,7 +2235,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "sword-master",
@@ -2102,7 +2250,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: true
+        discard: true,
+        release: true
       },
       {
         name: "taskmaster",
@@ -2116,7 +2265,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "thanos",
@@ -2130,7 +2280,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "the-collector",
@@ -2144,7 +2295,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "the-hood",
@@ -2158,7 +2310,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "the-infinaut",
@@ -2172,7 +2325,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "the-thing",
@@ -2186,7 +2340,8 @@ export default createStore({
         destroy: false,
         noAbility: true,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "thor",
@@ -2200,7 +2355,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "typhoid-mary",
@@ -2214,7 +2370,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "uatu",
@@ -2228,7 +2385,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "ultron",
@@ -2242,7 +2400,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "venom",
@@ -2256,7 +2415,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "viper",
@@ -2270,7 +2430,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "vision",
@@ -2284,7 +2445,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "vulture",
@@ -2298,7 +2460,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "warpath",
@@ -2312,7 +2475,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "wasp",
@@ -2326,7 +2490,8 @@ export default createStore({
         destroy: false,
         noAbility: true,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "wave",
@@ -2340,7 +2505,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "white-queen",
@@ -2354,7 +2520,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "white-tiger",
@@ -2368,7 +2535,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "wolfsbane",
@@ -2382,7 +2550,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "wolverine",
@@ -2396,7 +2565,8 @@ export default createStore({
         destroy: true,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "wong",
@@ -2410,7 +2580,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "yellowjacket",
@@ -2424,7 +2595,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "yondu",
@@ -2438,7 +2610,8 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
       {
         name: "zero",
@@ -2452,10 +2625,9 @@ export default createStore({
         destroy: false,
         noAbility: false,
         draw: false,
-        discard: false
+        discard: false,
+        release: true
       },
-    ],
-      unreleased: [
         {
           name: "absorbing-man",
           description: "При раскрытии: Если последняя сыгранная вами карта имела эффект 'При раскрытии', эта карта копирует его.",
@@ -2468,7 +2640,8 @@ export default createStore({
           destroy: false,
           noAbility: false,
           draw: false,
-          discard: false
+          discard: false,
+          release: false
         },
         {
           name: "galactus",
@@ -2482,10 +2655,10 @@ export default createStore({
           destroy: false,
           noAbility: false,
           draw: false,
-          discard: false
+          discard: false,
+          release: false
         },
-      ]
-    },
+      ],
     filteredCards: []
   },
   getters: {

@@ -53,12 +53,12 @@ export default {
       if(value.length) {
         const lowerName = this.search.toLowerCase();
       if (lowerName.length) {
-        this.names = this.cards.released.filter((card) => card.name.includes(lowerName));
+        this.names = this.cards.filter((card) => card.name.includes(lowerName));
         this.isRelust = true;
       }
 
       const lowerDescription = this.search.toLowerCase();
-      const lowerDescriptionsArray = this.cards.released.map((card) => (
+      const lowerDescriptionsArray = this.cards.map((card) => (
         {
           description: card.description.toLowerCase(),
           name: card.name,

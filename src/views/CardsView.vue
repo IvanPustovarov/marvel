@@ -21,13 +21,13 @@ export default {
     };
   },
   mounted() {
-    this.cardsToRender = this.cards.released;
+    this.cardsToRender = this.cards;
   },
   watch: {
     cardsFiltered (value) {
       this.cardsToRender = value;
       if (!value.length) {
-        this.cardsToRender = this.cards.released
+        this.cardsToRender = this.cards;
       }
     }
   },

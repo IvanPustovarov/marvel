@@ -3,18 +3,22 @@
     <div class="card">
       <img :src="require(`@/assets/cards/${card.name}.webp`)" alt="" />
       <div class="info">
-        <div>
-          Описание:
+        <div class="card-desc">
+          <span>Описание:</span>
           <p>{{ card.description }}</p>
         </div>
-        <span>Статы:</span>
         <div class="stats">
+          <span>Характеристики:</span>
           <div class="cost">{{ card.cost }}</div>
           <div class="power">{{ card.power }}</div>
         </div>
         <div>
           Статус:
-          <div>В релизе</div>
+          {{ release }}
+        </div>
+        <div>
+          Источник:
+          <div>{{ pool }}</div>
         </div>
       </div>
     </div>
@@ -38,10 +42,25 @@ export default {
       return this.params.id;
     },
     card() {
-      return this.$store.state.cards.released.find(
+      return this.$store.state.cards.find(
         (card) => card.name === this.cardId
       );
     },
+    release () {
+      return this.card.release ? "Выпущена" : "Не выпущена"
+    },
+    pool () {
+      const poolRus = {
+        0: 'Стартовый пул',
+        1: '1-14 уровни',
+        2: '1 пул',
+        3: '2 пул',
+        4: '3 пул',
+        5: '4 пул',
+        6: '5 пул'
+      };
+      return poolRus[this.card.pool];
+    }
   },
 };
 </script>
@@ -58,14 +77,23 @@ export default {
     align-items: flex-start;
     flex-direction: row;
     .info {
+      .card-desc{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        span {
+          margin-bottom: 0.25rem;
+          font-size: 24px;
+          font-weight: 900;
+        }
+      }
       gap: 20px;
       margin-top: 1rem;
       display: flex;
       flex-direction: column;
-      height: 16rem;
       width: 20rem;
       border-radius: 10px;
-      padding: 1rem;
+      padding: 2rem;
       background: black;
       color: white;
       transition: all ease-in-out 0.5s;
@@ -76,6 +104,10 @@ export default {
       .stats {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        span{
+          margin-right: 1rem;
+        }
         .power {
           position: relative;
           width: 34px;
