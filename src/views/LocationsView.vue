@@ -1,12 +1,25 @@
 <template>
-  <div class="container-location">Location</div>
+  <div class="container-location">
+    <LocationComponent
+      v-for="location in locations"
+      :key="location.name"
+      :name="location.name"
+    />
+  </div>
 </template>
 
 
 <script>
+import LocationComponent from '@/components/LocationComponent.vue';
 export default {
+  components: { LocationComponent },
   name: "LocationsPage",
   props: {},
+  computed: {
+    locations() {
+      return this.$store.getters.getLocations;
+    },
+  }
 };
 </script>
 

@@ -2659,7 +2659,17 @@ export default createStore({
           release: false
         },
       ],
-    filteredCards: []
+    filteredCards: [],
+    locations: [
+      {
+        name: 'asgard',
+        description: 'После 4го хода тыры пыры очень классно'
+      },
+      {
+        name: 'daily-bugle',
+        description: 'После 4го хода тыры пыры очень классно'
+      }
+    ]
   },
   getters: {
     getCards (state) {
@@ -2667,6 +2677,9 @@ export default createStore({
     },
     getFilteredCards (state) {
       return state.filteredCards;
+    },
+    getLocations (state) {
+      return state.locations;
     }
   },
   mutations: {
