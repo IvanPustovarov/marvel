@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     goToLocation() {
-      return this.$router.push(`/location/${this.name}`);
+    //   return this.$router.push(`/location/${this.name}`);
     },
   },
 };
