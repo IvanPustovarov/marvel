@@ -115,7 +115,6 @@ export default {
     input{
       border: none;
       height: 2rem;
-      background: wheat;
       border-radius: 5px;
       padding-left: 5px;
       margin-right: .5rem;
@@ -176,7 +175,7 @@ export default {
     width: 22.4rem;
     background: linear-gradient(
       180deg,
-      rgba(128, 70, 222, 0.9),
+      rgba(128, 70, 222),
       rgb(35, 14, 83)
       );
     background-size: 400% 400%;

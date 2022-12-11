@@ -14,17 +14,20 @@
         excepturi praesentium architecto. Dolorum provident vero ad. Suscipit totam
         laborum sed reprehenderit reiciendis libero pariatur odit error omnis nisi vel, tenetur ad unde soluta. Harum beatae modi culpa?</p>
     </div>
+    <!-- <Button /> -->
   </div>
 </template>
 
 <script>
-import MainLeftPolygons from '@/components/polygons/MainLeftPolygons.vue';
-import MainRightPolygons from '@/components/polygons/MainRightPolygons.vue';
+import MainLeftPolygons from '@/components/ui/MainLeftPolygons.vue';
+import MainRightPolygons from '@/components/ui/MainRightPolygons.vue';
+//import Button from '@/components/ui/Button.vue'
 export default {
   name: "HomeView",
   components: {
     MainLeftPolygons,
-    MainRightPolygons
+    MainRightPolygons,
+    // Button
   },
   data() {
     return {
