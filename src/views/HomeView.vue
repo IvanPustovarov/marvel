@@ -7,7 +7,12 @@
     </div>
     <div class="right-content item-main">
       <MainRightPolygons/>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, vel iusto temporibus totam incidunt nisi esse itaque cupiditate placeat voluptate sapiente consequatur possimus odio beatae quos, corrupti veritatis. Doloribus, eos beatae facere, dignissimos eligendi nobis corrupti expedita magnam distinctio at natus fugiat laudantium, similique ab quidem impedit? Quis iste fuga quibusdam alias incidunt reiciendis fugiat tempore, pariatur rem amet tenetur voluptatem recusandae doloremque cumque odit minus culpa possimus doloribus magnam temporibus debitis, excepturi praesentium architecto. Dolorum provident vero ad. Suscipit totam laborum sed reprehenderit reiciendis libero pariatur odit error omnis nisi vel, tenetur ad unde soluta. Harum beatae modi culpa?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, vel iusto temporibus totam incidunt nisi esse itaque cupiditate placeat
+        voluptate sapiente consequatur possimus odio beatae quos, corrupti veritatis. Doloribus, eos beatae facere, dignissimos eligendi nobis corrupti
+        expedita magnam distinctio at natus fugiat laudantium, similique ab quidem impedit? Quis iste fuga quibusdam alias incidunt reiciendis fugiat
+        tempore, pariatur rem amet tenetur voluptatem recusandae doloremque cumque odit minus culpa possimus doloribus magnam temporibus debitis,
+        excepturi praesentium architecto. Dolorum provident vero ad. Suscipit totam
+        laborum sed reprehenderit reiciendis libero pariatur odit error omnis nisi vel, tenetur ad unde soluta. Harum beatae modi culpa?</p>
     </div>
   </div>
 </template>

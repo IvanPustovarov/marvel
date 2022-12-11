@@ -11,6 +11,7 @@
 
 <script>
 import CardComponent from "@/components/CardComponent.vue";
+import cardsJson from "../../cards.json";
 export default {
   components: { CardComponent },
   name: "CardsPage",
@@ -21,6 +22,7 @@ export default {
     };
   },
   mounted() {
+    this.$store.commit('setCards', cardsJson);
     this.cardsToRender = this.cards;
   },
   watch: {
