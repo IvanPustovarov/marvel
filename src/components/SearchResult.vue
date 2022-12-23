@@ -60,6 +60,7 @@ export default {
 
 
 <style scoped lang="scss">
+@import '../assets/styles/style';
 .container-result{
     position: absolute;
     bottom: -5px;
@@ -72,12 +73,8 @@ export default {
         z-index: 1;
         .results{
             position: absolute;
-            background: linear-gradient(
-            180deg,
-            rgba(128, 70, 222),
-            rgb(35, 14, 83)
-          );
-            background-size: 400% 400%;
+            background: $back-gradient-solid;
+            background-size: $back-size-md;
             padding: 0 1rem 0 1rem;
             border-radius: 5px;
             // outline: 1px solid rgba(255, 255, 255, 0.5);
@@ -98,7 +95,7 @@ export default {
                 }
                 &:hover {
                   background: rgb(35, 14, 83);
-                  background-size: 400% 400%;
+                  background-size: $back-size-md;
                 }
             }
         }

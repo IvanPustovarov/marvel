@@ -66,6 +66,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '../assets/styles/style';
+
 .container-card {
   display: flex;
   flex-direction: row;
@@ -96,7 +98,7 @@ export default {
       padding: 2rem;
       background: black;
       color: white;
-      transition: all ease-in-out 0.5s;
+      transition: $transit-easy;
       &:hover{
          box-shadow: inset 0px 0px 17px 2px rgba(255, 255, 255, 0.5),
         0px 0px 49px 6px rgba(255, 255, 255, 0.5);
@@ -185,8 +187,8 @@ export default {
       }
     }
     img {
-      width: 300px;
-      transition: all ease-in-out 0.5s;
+      width: $img-width;
+      transition: $transit-easy;
       &:hover{
        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1.1, 1.1, 1.1)
       }

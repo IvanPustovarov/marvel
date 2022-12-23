@@ -86,6 +86,8 @@ export default {
 
 
 <style scoped lang="scss">
+@import '../assets/styles/style';
+
 .container-of-card {
   cursor: pointer;
   height: 24rem;
@@ -117,11 +119,11 @@ export default {
         color: black;
         background: white;
         outline: 4px solid black;
-        transition: all 0.5s ease-in-out;
+        transition: $transit-easy;
       }
     }
     img {
-      width: 300px;
+      width: $img-width;
     }
   }
 }

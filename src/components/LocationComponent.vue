@@ -31,6 +31,9 @@ export default {
 
 
 <style scoped lang="scss">
+@import '../assets/styles/style';
+
+
 .container-of-location {
 //   cursor: pointer;
 //   height: 24rem;
@@ -66,7 +69,7 @@ export default {
     //   }
     // }
     img {
-      width: 300px;
+      width: $img-width;
     }
   }
 }

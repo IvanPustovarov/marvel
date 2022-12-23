@@ -104,6 +104,8 @@ export default {
 
 
 <style scoped lang="scss">
+@import '../assets/styles/style';
+
 .container-search {
   display: flex;
   justify-content: center;
@@ -119,12 +121,8 @@ export default {
       padding-left: 5px;
       margin-right: .5rem;
       font-size: 18px;
-      background: linear-gradient(
-            180deg,
-            rgba(128, 70, 222, 0.9),
-            rgb(35, 14, 83)
-          );
-      background-size: 400% 400%;
+      background: $back-gradient;
+      background-size: $back-size-md;
       color: white;
       width: 30rem;
       &:focus{
@@ -150,12 +148,8 @@ export default {
       padding: 0 0.5rem 0 0.5rem;
       color: white;
       height: 2rem;
-      background: linear-gradient(
-      180deg,
-      rgba(128, 70, 222, 0.9),
-      rgb(35, 14, 83)
-      );
-      background-size: 400% 400%;
+      background:$back-gradient;
+      background-size: $back-size-md;
       cursor: pointer;
       margin-right: 1rem;
       &:disabled{
@@ -173,12 +167,8 @@ export default {
   .search-result{
     position: absolute;
     width: 22.4rem;
-    background: linear-gradient(
-      180deg,
-      rgba(128, 70, 222),
-      rgb(35, 14, 83)
-      );
-    background-size: 400% 400%;
+    background: $back-gradient-solid;
+    background-size: $back-size-md;
     bottom: 0;
     border-radius: 3px;
     align-self: flex-start;

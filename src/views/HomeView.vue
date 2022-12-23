@@ -40,6 +40,8 @@ export default {
 
 
 <style scoped lang="scss">
+@import '../assets/styles/style';
+
 .container-home {
   flex: 1;
   margin-top: 1rem;
@@ -71,12 +73,11 @@ export default {
     border-radius: 3px;
     color: white;
     background-color: rgb(0, 0, 0);
-    transition: color 0.5s, background-color 0.5s, transform 0.5s, box-shadow 0.5s;
+    transition: $transit-easy;
     &:hover{
       color: black;
       background-color: white;
-      transform: perspective(1000px) rotateX(0deg) rotateY(0deg)
-                 scale3d(1.035, 1.035, 1.035);
+      transform: $trans-3d;
       box-shadow: inset 0px 0px 11px 1px rgba(255, 255, 255, 0.5),
                       0px 0px 78px 5px rgba(255, 255, 255, 0.5);
     }

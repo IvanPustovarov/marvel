@@ -33,6 +33,8 @@ export default {
 
 
 <style scoped lang="scss">
+@import '../assets/styles/style';
+
 .nav-panel {
   width: 100%;
   min-height: 5rem;
@@ -59,9 +61,8 @@ export default {
       img {
         width: 80%;
         &:hover {
-          transform: perspective(1000px) rotateX(0deg) rotateY(0deg)
-            scale3d(1.035, 1.035, 1.035);
-          transition: all 0.5s ease-out;
+          transform: $trans-3d;
+          transition: $transit-easy;
         }
       }
     }
@@ -70,7 +71,7 @@ export default {
       display: flex;
       align-items: center;
       .item {
-        padding: 0 1rem 0 0.3rem;
+        padding: 0 0 0 0.3rem;
         height: 100%;
         height: 5rem;
         display: flex;
@@ -78,15 +79,11 @@ export default {
         font-size: 18px;
         a {
           text-decoration: none;
-          padding: 2.5rem 0 2.5rem 0;
+          padding: 2.5rem 1rem 2.5rem 0;
         }
         &:hover {
-          background: linear-gradient(
-            180deg,
-            rgba(128, 70, 222, 0.9),
-            rgb(35, 14, 83)
-          );
-          background-size: 200% 200%;
+          background: $back-gradient;
+          background-size: $back-size-sm;
         }
       }
     }
@@ -94,7 +91,7 @@ export default {
   .br {
   height: 0.7rem;
   background: linear-gradient(-45deg, #ed193b, #a98055, #f286e2, #681d7a);
-  background-size: 400% 400%;
+  background-size: $back-size-md;
   animation: gradient 10s ease infinite;
 }
 }
