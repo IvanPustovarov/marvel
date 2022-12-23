@@ -1,6 +1,6 @@
 <template>
   <div class="container-home">
-    <div class="left-nav item-main">
+     <div class="left-nav item-main">
       <MainLeftPolygons/>
       <h1>"Марвел Снап"</h1>
       <p>Здесь вы можете посмотреть актуальные карты и локации по игре "Марвел Снап".</p>
@@ -14,20 +14,19 @@
         excepturi praesentium architecto. Dolorum provident vero ad. Suscipit totam
         laborum sed reprehenderit reiciendis libero pariatur odit error omnis nisi vel, tenetur ad unde soluta. Harum beatae modi culpa?</p>
     </div>
-    <!-- <Button /> -->
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue';
 import MainLeftPolygons from '@/components/ui/MainLeftPolygons.vue';
 import MainRightPolygons from '@/components/ui/MainRightPolygons.vue';
-//import Button from '@/components/ui/Button.vue'
-export default {
-  name: "HomeView",
+
+export default defineComponent({
+  name: 'HomeView',
   components: {
     MainLeftPolygons,
-    MainRightPolygons,
-    // Button
+    MainRightPolygons
   },
   data() {
     return {
@@ -35,9 +34,8 @@ export default {
   },
   methods: {
   }
-};
+});
 </script>
-
 
 <style scoped lang="scss">
 @import '../assets/styles/style';
