@@ -1,5 +1,5 @@
 <template>
-  <div class="container-settings">
+  <div class="container-settings cont-all">
     <div @click="closeSettings" class="close">
         <img src="@/assets/icon-close.webp" alt="close">
     </div>
@@ -38,7 +38,6 @@ export default {
 
 <style scoped lang="scss">
 .container-settings{
-    display: flex;
     flex-direction: column;
     width: 300px;
     height: 300px;

@@ -1,16 +1,16 @@
 <template>
-  <div class="container-card">
-    <div class="card">
+  <div class="container-card cont-all">
+    <div class="card cont-all">
       <img :src="require(`@/assets/cards/${card.name}.webp`)" alt="" />
       <div class="info">
-        <div class="card-desc">
+        <div class="card-desc cont-all">
           <span>Описание:</span>
           <p>{{ card.description }}</p>
         </div>
-        <div class="stats">
+        <div class="stats cont-all">
           <span>Характеристики:</span>
-          <div class="cost">{{ card.cost }}</div>
-          <div class="power">{{ card.power }}</div>
+          <div class="cost cont-all">{{ card.cost }}</div>
+          <div class="power cont-all">{{ card.power }}</div>
         </div>
         <div>
           Статус:
@@ -68,19 +68,16 @@ export default {
 <style scoped lang="scss">
 
 .container-card {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex: 1;
   margin-top: 2rem;
   .card {
-    display: flex;
     align-items: flex-start;
     flex-direction: row;
     .info {
       .card-desc{
         text-align: center;
-        display: flex;
         flex-direction: column;
         span {
           margin-bottom: 0.25rem;
@@ -90,7 +87,6 @@ export default {
       }
       gap: 20px;
       margin-top: 1rem;
-      display: flex;
       flex-direction: column;
       width: 20rem;
       border-radius: 10px;
@@ -103,7 +99,6 @@ export default {
         0px 0px 49px 6px rgba(255, 255, 255, 0.5);
       }
       .stats {
-        display: flex;
         flex-direction: row;
         align-items: center;
         span{
@@ -117,7 +112,6 @@ export default {
           padding: 6px;
           display: -webkit-box;
           display: -ms-flexbox;
-          display: flex;
           -webkit-box-pack: center;
           -ms-flex-pack: center;
           justify-content: center;
@@ -156,7 +150,6 @@ export default {
           background-color: #3561fd;
           display: -webkit-box;
           display: -ms-flexbox;
-          display: flex;
           -webkit-box-pack: center;
           -ms-flex-pack: center;
           justify-content: center;

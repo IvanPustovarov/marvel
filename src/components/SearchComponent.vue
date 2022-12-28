@@ -1,6 +1,12 @@
 <template>
-  <div class="container-search">
-    <div class="search">
+  <div class="
+      container-search
+      cont-all
+      ">
+    <div class="
+        search
+        cont-all
+      ">
       <input v-focus type="text" v-model="search" placeholder="Поиск"/>
       <button @click="setCardsFilter" :disabled="!isRelust" class="button-filter-cards button-top">поиск</button>
       <button @click="resetCardsFilter" :disabled="!cardsFiltered.length" class="button-reset-cards button-top">сбросить фильтры</button>
@@ -106,12 +112,10 @@ export default {
 <style scoped lang="scss">
 
 .container-search {
-  display: flex;
   justify-content: center;
   position: relative;
   margin-left: 2rem;
   .search{
-    display: flex;
     align-items: center;
     input{
       border: none;

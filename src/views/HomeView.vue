@@ -1,5 +1,5 @@
 <template>
-  <div class="container-home">
+  <div class="container-home cont-all">
      <div class="left-nav item-main">
       <MainLeftPolygons/>
       <h1>"Марвел Снап"</h1>
@@ -44,7 +44,6 @@ export default defineComponent({
   flex: 1;
   margin-top: 1rem;
   flex-direction: row;
-  display: flex;
   align-items: flex-start;
   width: 95%;
   gap: 110px;

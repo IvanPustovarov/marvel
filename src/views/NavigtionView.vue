@@ -6,14 +6,14 @@
           <img src="@/assets/logo.png" alt="" />
         </router-link>
       </div>
-      <div class="links">
-        <div class="item">
+      <div class="links cont-all">
+        <div class="item cont-all">
           <router-link to="/">Главная</router-link>
         </div>
-        <div class="item">
+        <div class="item cont-all">
           <router-link to="/cards">Карты</router-link>
         </div>
-        <div class="item">
+        <div class="item cont-all">
           <router-link to="/locations">Локации</router-link>
         </div>
       </div>
@@ -68,13 +68,11 @@ export default {
     }
     .links {
       padding: 0 0 0 10rem;
-      display: flex;
       align-items: center;
       .item {
         padding: 0 0 0 0.3rem;
         height: 100%;
         height: 5rem;
-        display: flex;
         align-items: center;
         font-size: 18px;
         a {

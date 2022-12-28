@@ -1,6 +1,13 @@
 <template>
-  <div class="container-of-card" @click="goToCard">
-    <div class="card">
+  <div class="
+      container-of-card
+      cont-all
+      "
+      @click="goToCard">
+    <div class="
+        card
+        cont-all
+      ">
       <img
         :src="require(`@/assets/cards/${name}.webp`)"
         alt="card"
@@ -8,7 +15,7 @@
         @mousemove="mouseMove"
         @mouseleave="mouseLeave"
       />
-      <div v-html="editDescription(description)" class="description">
+      <div v-html="editDescription(description)" class="description cont-all">
       </div>
     </div>
   </div>
@@ -90,17 +97,14 @@ export default {
 .container-of-card {
   cursor: pointer;
   height: 24rem;
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-content: flex-start;
   margin: 1rem;
   .card {
-    display: flex;
     align-items: center;
     flex-direction: column;
     .description {
-      display: flex;
       flex-direction: column;
       color: white;
       font-weight: 500;
