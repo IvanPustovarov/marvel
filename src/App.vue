@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-app flex">
     <NavigtionView />
     <router-view />
     <FooterView />
@@ -32,8 +32,8 @@ body {
   flex-direction: column;
 }
 
-.container {
-  display: flex;
+.container-app {
+  // display: flex;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;

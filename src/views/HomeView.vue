@@ -13,7 +13,7 @@
         tempore, pariatur rem amet tenetur voluptatem recusandae doloremque cumque odit minus culpa possimus doloribus magnam temporibus debitis,
         excepturi praesentium architecto. Dolorum provident vero ad. Suscipit totam
         laborum sed reprehenderit reiciendis libero pariatur odit error omnis nisi vel, tenetur ad unde soluta. Harum beatae modi culpa?</p>
-        <div class="test">ok</div>
+        <div class="test font-bold">okasdasdasdads</div>
     </div>
   </div>
 </template>
