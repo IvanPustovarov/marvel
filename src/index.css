@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.red-background {
+    @apply bg-red-500
+}
+
+@layer base {
+    body {
+
+    }
+}
+
