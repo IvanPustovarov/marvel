@@ -60,7 +60,6 @@ export default {
 
 
 <style scoped lang="scss">
-@import '../assets/styles/style';
 .container-result{
     position: absolute;
     bottom: -5px;

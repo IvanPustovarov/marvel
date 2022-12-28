@@ -13,6 +13,7 @@
         tempore, pariatur rem amet tenetur voluptatem recusandae doloremque cumque odit minus culpa possimus doloribus magnam temporibus debitis,
         excepturi praesentium architecto. Dolorum provident vero ad. Suscipit totam
         laborum sed reprehenderit reiciendis libero pariatur odit error omnis nisi vel, tenetur ad unde soluta. Harum beatae modi culpa?</p>
+        <div class="test">ok</div>
     </div>
   </div>
 </template>
@@ -38,7 +39,6 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-@import '../assets/styles/style';
 
 .container-home {
   flex: 1;
@@ -65,6 +65,9 @@ export default defineComponent({
     height: 23rem;
     width: 29rem;
     margin-left: 1rem;
+
+    & .test{
+    }
   }
   .item-main{
     position: relative;

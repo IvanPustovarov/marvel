@@ -31,8 +31,6 @@ export default {
 
 
 <style scoped lang="scss">
-@import '../assets/styles/style';
-
 
 .container-of-location {
 //   cursor: pointer;

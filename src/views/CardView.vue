@@ -66,7 +66,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../assets/styles/style';
 
 .container-card {
   display: flex;

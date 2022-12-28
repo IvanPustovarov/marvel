@@ -33,7 +33,7 @@ export default {
 
 
 <style scoped lang="scss">
-@import '../assets/styles/style';
+
 
 .nav-panel {
   width: 100%;
