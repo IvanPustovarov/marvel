@@ -62,9 +62,9 @@ export default {
 <style scoped lang="scss">
 .container-result{
     position: absolute;
-    bottom: -5px;
+    bottom: -$indent-sm-px;
     left: 0;
-    width: 100%;
+    width: $full-percent;
     .search-result{
         flex-direction: column;
         position: relative;
@@ -73,16 +73,16 @@ export default {
             position: absolute;
             background: $back-gradient-solid;
             background-size: $back-size-md;
-            padding: 0 1rem 0 1rem;
-            border-radius: 5px;
+            padding: 0 $indent-sm 0 $indent-sm;
+            border-radius: $indent-sm-px;
             // outline: 1px solid rgba(255, 255, 255, 0.5);
             div{
                 cursor: pointer;
                 margin-bottom: 0.5rem;
-                border-radius: 5px;
+                border-radius: $indent-sm-px;
                 span{
                     background: black;
-                    border-top-left-radius: 5px;
+                    border-top-left-radius: $indent-sm-px;
                     color: white;
                      &:hover{
                         background: inherit;

@@ -36,7 +36,7 @@ export default {
 
 
 .nav-panel {
-  width: 100%;
+  width: $full-percent;
   min-height: 5rem;
   nav {
     background-color: rgb(27, 30, 41);
@@ -45,7 +45,7 @@ export default {
     position: relative;
     a {
       font-style: italic;
-      font-weight: bold;
+      font-weight: $font-bold;
       color: #ffffff;
 
       &.router-link-exact-active {
@@ -55,7 +55,7 @@ export default {
     .logo-img {
       position: absolute;
       cursor: pointer;
-      top: 5px;
+      top: $indent-sm-px;
       left: 14px;
       height: 5rem;
       img {
@@ -71,13 +71,13 @@ export default {
       align-items: center;
       .item {
         padding: 0 0 0 0.3rem;
-        height: 100%;
+        height: $full-percent;
         height: 5rem;
         align-items: center;
         font-size: 18px;
         a {
           text-decoration: none;
-          padding: 2.5rem 1rem 2.5rem 0;
+          padding: 2.5rem $indent-sm 2.5rem 0;
         }
         &:hover {
           background: $back-gradient;
@@ -100,7 +100,7 @@ export default {
     background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: $full-percent 50%;
   }
   100% {
     background-position: 0% 50%;

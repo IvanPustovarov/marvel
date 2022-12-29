@@ -42,7 +42,7 @@ export default {
     width: 300px;
     height: 300px;
     background: white;
-    border-radius: 5px;
+    border-radius: $indent-sm-px;
     position: absolute;
     top: 4rem;
     left: 31rem;

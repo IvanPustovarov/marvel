@@ -5,7 +5,7 @@
       <div class="info">
         <div class="card-desc cont-all">
           <span>Описание:</span>
-          <p>{{ card.description }}</p>
+          <p class="pb-2">{{ card.description }}</p>
         </div>
         <div class="stats cont-all">
           <span>Характеристики:</span>
@@ -71,7 +71,7 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   flex: 1;
-  margin-top: 2rem;
+  margin-top: $indent-md;
   .card {
     align-items: flex-start;
     flex-direction: row;
@@ -82,15 +82,15 @@ export default {
         span {
           margin-bottom: 0.25rem;
           font-size: 24px;
-          font-weight: 900;
+          font-weight: $font-xl-bold;
         }
       }
       gap: 20px;
-      margin-top: 1rem;
+      margin-top: $indent-sm;
       flex-direction: column;
       width: 20rem;
-      border-radius: 10px;
-      padding: 2rem;
+      border-radius: $indent-md-px;
+      padding: $indent-md;
       background: black;
       color: white;
       transition: $transit-easy;
@@ -102,13 +102,13 @@ export default {
         flex-direction: row;
         align-items: center;
         span{
-          margin-right: 1rem;
+          margin-right: $indent-sm;
         }
         .power {
           position: relative;
           width: 34px;
           height: 34px;
-          font-weight: 900;
+          font-weight: $font-xl-bold;
           padding: 6px;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -144,7 +144,7 @@ export default {
           margin-right: 12px;
           width: 32px;
           height: 31px;
-          font-weight: 900;
+          font-weight: $font-xl-bold;
           padding: 6px;
           border-radius: 50%;
           background-color: #3561fd;

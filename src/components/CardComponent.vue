@@ -100,23 +100,23 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-content: flex-start;
-  margin: 1rem;
+  margin: $indent-sm;
   .card {
     align-items: center;
     flex-direction: column;
     .description {
       flex-direction: column;
       color: white;
-      font-weight: 500;
+      font-weight: $font-standart;
       font-size: 14px;
       width: 15rem;
       text-align: center;
       background: rgb(0, 0, 0);
-      padding: 5px;
-      border-radius: 10px;
+      padding: $indent-sm-px;
+      border-radius: $indent-md-px;
       span {
         font-size: 17px;
-        font-weight: 600;
+        font-weight: $font-bold;
       }
       &:hover {
         color: black;
@@ -133,6 +133,6 @@ export default {
 
 ::v-deep .span-ability {
       font-size: 17px;
-      font-weight: 600;
+      font-weight: $font-bold;
   }
 </style>

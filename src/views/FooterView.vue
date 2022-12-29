@@ -12,10 +12,10 @@ export default {
 
 <style scoped lang="scss">
 .footer {
-  width: 100%;
+  width: $full-percent;
   color: rgb(255, 255, 255);
   background: rgb(17, 17, 16);
   min-height: 3rem;
-  margin-top: 1rem;
+  margin-top: $indent-sm;
 }
 </style>

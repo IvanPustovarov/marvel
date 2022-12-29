@@ -8,8 +8,8 @@
         cont-all
       ">
       <input v-focus type="text" v-model="search" placeholder="Поиск"/>
-      <button @click="setCardsFilter" :disabled="!isRelust" class="button-filter-cards button-top">поиск</button>
-      <button @click="resetCardsFilter" :disabled="!cardsFiltered.length" class="button-reset-cards button-top">сбросить фильтры</button>
+      <button @click="setCardsFilter" :disabled="!isRelust" class="button-filter-cards button-top text-[14px]">поиск</button>
+      <button @click="resetCardsFilter" :disabled="!cardsFiltered.length" class="button-reset-cards button-top text-[14px]">сбросить фильтры</button>
       <div class="settings" @click="openSetting">
         <img :src="SettingsLogo" alt="setting">
       </div>
@@ -114,14 +114,14 @@ export default {
 .container-search {
   justify-content: center;
   position: relative;
-  margin-left: 2rem;
+  margin-left: $indent-md;
   .search{
     align-items: center;
     input{
       border: none;
-      height: 2rem;
-      border-radius: 5px;
-      padding-left: 5px;
+      height: $indent-md;
+      border-radius: $indent-sm-px;
+      padding-left: $indent-sm-px;
       margin-right: .5rem;
       font-size: 18px;
       background: $back-gradient;
@@ -150,11 +150,11 @@ export default {
       border-radius: 2px;
       padding: 0 0.5rem 0 0.5rem;
       color: white;
-      height: 2rem;
+      height: $indent-md;
       background:$back-gradient;
       background-size: $back-size-md;
       cursor: pointer;
-      margin-right: 1rem;
+      margin-right: $indent-sm;
       &:disabled{
         color: black;
         cursor: auto;

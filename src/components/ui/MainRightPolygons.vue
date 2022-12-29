@@ -19,7 +19,7 @@ export default {
 .polygon-container{
     .polygon{
       background: linear-gradient(-90deg, #000000, #78687c);
-      background-size: 100% 100%;
+      background-size: $full-percent $full-percent;
       position: absolute;
     }
     .first-polygon{

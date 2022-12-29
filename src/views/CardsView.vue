@@ -49,7 +49,7 @@ export default {
   flex: 1;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: $indent-md;
   justify-content: center;
 }
 </style>
