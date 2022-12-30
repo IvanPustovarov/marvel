@@ -35,45 +35,5 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-
-.container-home {
-  flex: 1;
-  margin-top: $indent-sm;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 95%;
-  gap: 110px;
-  .left-nav {
-    width: 42rem;
-    height: 27rem;
-    .title {
-      height: 5rem;
-    }
-    h1{
-      margin: $indent-sm 0 0 $indent-sm;
-    }
-    p{
-      margin: 0 $indent-sm 0 $indent-sm;
-    }
-  }
-  .right-content {
-    height: 23rem;
-    width: 29rem;
-    margin-left: $indent-sm;
-  }
-  .item-main{
-    position: relative;
-    border-radius: 3px;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    transition: $transit-easy;
-    &:hover{
-      color: black;
-      background-color: white;
-      transform: $trans-3d;
-      box-shadow: inset 0px 0px 11px 1px rgba(255, 255, 255, 0.5),
-                      0px 0px 78px 5px rgba(255, 255, 255, 0.5);
-    }
-  }
-}
+@import '../assets/styles/_home.scss';
 </style>

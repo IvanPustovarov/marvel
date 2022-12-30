@@ -60,51 +60,5 @@ export default {
 
 
 <style scoped lang="scss">
-.container-result{
-    position: absolute;
-    bottom: -$indent-sm-px;
-    left: 0;
-    width: $full-percent;
-    .search-result{
-        flex-direction: column;
-        position: relative;
-        z-index: 1;
-        .results{
-            position: absolute;
-            background: $back-gradient-solid;
-            background-size: $back-size-md;
-            padding: 0 $indent-sm 0 $indent-sm;
-            border-radius: $indent-sm-px;
-            // outline: 1px solid rgba(255, 255, 255, 0.5);
-            div{
-                cursor: pointer;
-                margin-bottom: 0.5rem;
-                border-radius: $indent-sm-px;
-                span{
-                    background: black;
-                    border-top-left-radius: $indent-sm-px;
-                    color: white;
-                     &:hover{
-                        background: inherit;
-                    }
-                }
-                p{
-                    color: white;
-                }
-                &:hover {
-                  background: rgb(35, 14, 83);
-                  background-size: $back-size-md;
-                }
-            }
-        }
-        .descriptions{
-            height: 20rem;
-            overflow-y: scroll;
-        }
-        .names{
-            height: 15rem;
-            overflow-y: scroll;
-        }
-    }
-}
+@import '../assets/styles/_search-result.scss';
 </style>

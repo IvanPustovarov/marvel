@@ -19,6 +19,8 @@
         font-family: "Arkhip", Helvetica, Arial;
         padding: 0;
         margin: 0;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
     }
 
     @font-face {

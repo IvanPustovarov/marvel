@@ -33,47 +33,10 @@ export default {
 <style scoped lang="scss">
 
 .container-of-location {
-//   cursor: pointer;
-//   height: 24rem;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   align-content: flex-start;
-//   margin: 1rem;
   .location {
-    // display: flex;
-    // align-items: center;
-    // flex-direction: column;
-    // .description {
-    //   display: flex;
-    //   flex-direction: column;
-    //   color: white;
-    //   font-weight: 500;
-    //   font-size: 14px;
-    //   width: 15rem;
-    //   text-align: center;
-    //   background: rgb(0, 0, 0);
-    //   padding: 5px;
-    //   border-radius: 10px;
-    //   span {
-    //     font-size: 17px;
-    //     font-weight: 600;
-    //   }
-    //   &:hover {
-    //     color: black;
-    //     background: white;
-    //     outline: 4px solid black;
-    //     transition: all 0.5s ease-in-out;
-    //   }
-    // }
     img {
       width: $img-width;
     }
   }
 }
-
-// ::v-deep .span-ability {
-//       font-size: 17px;
-//       font-weight: 600;
-//   }
 </style>
