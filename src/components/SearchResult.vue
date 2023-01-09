@@ -1,6 +1,6 @@
 <template>
   <div class="container-result">
-    <div class="search-result" v-if="names.length || descriptions.length">
+    <div class="search-result cont-all" v-if="names.length || descriptions.length">
       <div class="results descriptions" v-if="descriptions.length">
         <div v-for="item in descriptions"
             :key="item.name"
@@ -60,52 +60,5 @@ export default {
 
 
 <style scoped lang="scss">
-.container-result{
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    .search-result{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        z-index: 1;
-        .results{
-            position: absolute;
-            background: $back-gradient-solid;
-            background-size: $back-size-md;
-            padding: 0 1rem 0 1rem;
-            border-radius: 5px;
-            // outline: 1px solid rgba(255, 255, 255, 0.5);
-            div{
-                cursor: pointer;
-                margin-bottom: 0.5rem;
-                border-radius: 5px;
-                span{
-                    background: black;
-                    border-top-left-radius: 5px;
-                    color: white;
-                     &:hover{
-                        background: inherit;
-                    }
-                }
-                p{
-                    color: white;
-                }
-                &:hover {
-                  background: rgb(35, 14, 83);
-                  background-size: $back-size-md;
-                }
-            }
-        }
-        .descriptions{
-            height: 20rem;
-            overflow-y: scroll;
-        }
-        .names{
-            height: 15rem;
-            overflow-y: scroll;
-        }
-    }
-}
+@import '../assets/styles/_search-result.scss';
 </style>

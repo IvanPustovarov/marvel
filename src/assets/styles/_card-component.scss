@@ -1,0 +1,41 @@
+.container-of-card {
+  cursor: pointer;
+  height: 24rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin: $indent-sm;
+  .card {
+    align-items: center;
+    flex-direction: column;
+    .description {
+      flex-direction: column;
+      color: white;
+      font-weight: $font-standart;
+      font-size: 14px;
+      width: 15rem;
+      text-align: center;
+      background: rgb(0, 0, 0);
+      padding: $indent-sm-px;
+      border-radius: $indent-md-px;
+      span {
+        font-size: 17px;
+        font-weight: $font-bold;
+      }
+      &:hover {
+        color: black;
+        background: white;
+        outline: 4px solid black;
+        transition: $transit-easy;
+      }
+    }
+    img {
+      width: $img-width;
+    }
+  }
+}
+
+::v-deep .span-ability {
+    font-size: 17px;
+    font-weight: $font-bold;
+}

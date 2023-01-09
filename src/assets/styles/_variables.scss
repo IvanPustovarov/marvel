@@ -16,7 +16,16 @@ $trans-3d: perspective(1000px) rotateX(0deg) rotateY(0deg)
             scale3d(1.035, 1.035, 1.035);
 $transit-easy: all 0.5s ease-out;
 $img-width: 300px;
+$indent-sm: 1rem;
+$indent-md: 2rem;
+$indent-sm-px: 5px;
+$indent-md-px: 10px;
 
+$font-bold: 600;
+$font-standart: 500;
+$font-xl-bold: 900;
+
+$full-percent: 100%;
 // BREAKPOINTS
 
 $screen-mobile: 'screen and (max-width: 600px)';

@@ -1,5 +1,8 @@
 <template>
-  <div class="container-app flex">
+  <div class="
+    container-app
+    cont-all
+  ">
     <NavigtionView />
     <router-view />
     <FooterView />
@@ -37,7 +40,6 @@ body {
 }
 
 .container-app {
-  // display: flex;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
@@ -51,8 +53,4 @@ body {
   background-size: 400% 400%;
 }
 
-::-webkit-scrollbar-thumb {
-  box-shadow: inset 0 0 15px rgba(255, 255, 255);
-  border-radius: 2px;
-}
 </style>

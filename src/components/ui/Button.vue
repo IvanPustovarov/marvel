@@ -35,7 +35,7 @@ export default {
     justify-content: center;
     clip-path: polygon(22% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
     position: relative;
-    border-radius: 5px;
+    border-radius: $indent-sm-px;
     .text{
         align-self: center;
     }
@@ -44,7 +44,7 @@ export default {
         width: 88px;
         height: 7px;
         background-color: rgb(96, 116, 188);
-        top: 10px;
+        top: $indent-md-px;
         right: 134px;
         transform: rotate(-24deg);
         box-shadow: 7px 1px 8px 4px rgb(153 153 217 / 50%);

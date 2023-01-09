@@ -1,16 +1,16 @@
 <template>
-  <div class="container-card">
-    <div class="card">
+  <div class="container-card cont-all">
+    <div class="card cont-all">
       <img :src="require(`@/assets/cards/${card.name}.webp`)" alt="" />
       <div class="info">
-        <div class="card-desc">
+        <div class="card-desc cont-all">
           <span>Описание:</span>
-          <p>{{ card.description }}</p>
+          <p class="pb-2">{{ card.description }}</p>
         </div>
-        <div class="stats">
+        <div class="stats cont-all">
           <span>Характеристики:</span>
-          <div class="cost">{{ card.cost }}</div>
-          <div class="power">{{ card.power }}</div>
+          <div class="cost cont-all">{{ card.cost }}</div>
+          <div class="power cont-all">{{ card.power }}</div>
         </div>
         <div>
           Статус:
@@ -66,132 +66,5 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-
-.container-card {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex: 1;
-  margin-top: 2rem;
-  .card {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    .info {
-      .card-desc{
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        span {
-          margin-bottom: 0.25rem;
-          font-size: 24px;
-          font-weight: 900;
-        }
-      }
-      gap: 20px;
-      margin-top: 1rem;
-      display: flex;
-      flex-direction: column;
-      width: 20rem;
-      border-radius: 10px;
-      padding: 2rem;
-      background: black;
-      color: white;
-      transition: $transit-easy;
-      &:hover{
-         box-shadow: inset 0px 0px 17px 2px rgba(255, 255, 255, 0.5),
-        0px 0px 49px 6px rgba(255, 255, 255, 0.5);
-      }
-      .stats {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        span{
-          margin-right: 1rem;
-        }
-        .power {
-          position: relative;
-          width: 34px;
-          height: 34px;
-          font-weight: 900;
-          padding: 6px;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
-          background-color: #fe6b26;
-          -webkit-clip-path: polygon(
-            50% 0%,
-            95% 25%,
-            95% 75%,
-            50% 100%,
-            5% 75%,
-            5% 25%
-          );
-          clip-path: polygon(
-            50% 0%,
-            95% 25%,
-            95% 75%,
-            50% 100%,
-            5% 75%,
-            5% 25%
-          );
-          -webkit-box-shadow: inset 4px -2px 1px #fff6bb;
-          box-shadow: inset 7px 0px 1px #fff6bb;
-          text-shadow: -2px 0 #712401, 0 2px #712401, 1px 0 #712401,
-            0 -2px #712401;
-        }
-        .cost {
-          margin-right: 12px;
-          width: 32px;
-          height: 31px;
-          font-weight: 900;
-          padding: 6px;
-          border-radius: 50%;
-          background-color: #3561fd;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
-          border: solid 1px #64a4ef;
-          background-image: linear-gradient(
-              137deg,
-              #fdfdfd 16%,
-              rgba(41, 150, 164, 0) 25%,
-              rgba(41, 150, 164, 0) 104%,
-              #fff 82%
-            ),
-            radial-gradient(
-              circle at 50% 50%,
-              #2f4f8f,
-              #3561fd 44%,
-              #097f95 73%,
-              #2da5b7 76%
-            );
-          -webkit-box-shadow: inset 0px 0px 3px #fff;
-          box-shadow: inset 0px 0px 3px #fff;
-          text-shadow: -2px 0 #011d7e, 0 2px #011d7e, 1px 0 #011d7e,
-            0 -2px #011d7e;
-        }
-      }
-    }
-    img {
-      width: $img-width;
-      transition: $transit-easy;
-      &:hover{
-       transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1.1, 1.1, 1.1)
-      }
-    }
-  }
-}
+@import '../assets/styles/_card-view.scss';
 </style>

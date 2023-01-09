@@ -1,0 +1,64 @@
+.container-search {
+  justify-content: center;
+  position: relative;
+  margin-left: $indent-md;
+  .search{
+    align-items: center;
+    input{
+      border: none;
+      height: $indent-md;
+      border-radius: $indent-sm-px;
+      padding-left: $indent-sm-px;
+      margin-right: .5rem;
+      font-size: 18px;
+      background: $back-gradient;
+      background-size: $back-size-md;
+      color: white;
+      width: 30rem;
+      &:focus{
+        outline: none;
+      }
+      &::placeholder {
+          color: rgb(153, 151, 170);
+          letter-spacing: -1.5px;
+        }
+    }
+    .settings{
+      cursor: pointer;
+      padding: 1px 2px 1px 2px;
+      img{
+        width: 30px;
+        height: 30px;
+        filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(-140deg) brightness(87%) contrast(119%);
+      }
+    }
+    .button-top{
+      border: none;
+      border-radius: 2px;
+      padding: 0 0.5rem 0 0.5rem;
+      color: white;
+      height: $indent-md;
+      background:$back-gradient;
+      background-size: $back-size-md;
+      cursor: pointer;
+      margin-right: $indent-sm;
+      &:disabled{
+        color: black;
+        cursor: auto;
+      }
+    }
+    .button-reset-cards{
+      background: none;
+      background-color: rgb(233, 110, 110);
+    }
+  }
+  .search-result{
+    position: absolute;
+    width: 22.4rem;
+    background: $back-gradient-solid;
+    background-size: $back-size-md;
+    bottom: 0;
+    border-radius: 3px;
+    align-self: flex-start;
+  }
+}

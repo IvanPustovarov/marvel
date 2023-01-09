@@ -1,5 +1,5 @@
 <template>
-  <div class="container-cards">
+  <div class="container-cards cont-all">
     <CardComponent
       v-for="card in cardsToRender"
       :key="card.name"
@@ -47,10 +47,9 @@ export default {
 <style scoped lang="scss">
 .container-cards {
   flex: 1;
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: $indent-md;
   justify-content: center;
 }
 </style>

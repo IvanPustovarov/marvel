@@ -2,14 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-.red-background {
-    @apply bg-red-500
-}
 
 @layer base {
     * {
         user-select: none;
         -webkit-tap-highlight-color: transparent;
+    }
+
+.cont-all{
+    @apply flex
+}
+
+@layer base {
+    body {
+        display: flex;
+        justify-content: center;
+        background: center repeat url("./assets/back.jpg");
+        flex-direction: column;
+    }
+
+    * {
+        font-family: "Arkhip", Helvetica, Arial;
+        padding: 0;
+        margin: 0;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    @font-face {
+        font-family: "Arkhip";
+        src: local("Arkhip"), url(./fonts/Arkhip/Arkhip_font.ttf) format("truetype");
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: linear-gradient(
+            180deg,
+            rgba(23, 12, 40, 0.9),
+            rgb(24, 15, 46)
+            );
+        background-size: 400% 400%;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 15px rgba(255, 255, 255);
+        border-radius: 2px;
     }
 }
 
