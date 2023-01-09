@@ -1,6 +1,22 @@
-import { createStore } from 'vuex'
+import { InjectionKey } from "vue";
+// @ts-ignore
+import { createStore, Store } from 'vuex'
+import { ICard } from "@/interfaces/ICard";
 
-export default createStore({
+interface ILocations {
+  name: string;
+  description: string;
+}
+
+export interface State {
+  cards: ICard[],
+  filteredCards: ICard[],
+  locations: ILocations[]
+}
+
+export const key: InjectionKey<Store<State>> = Symbol()
+
+export const store = createStore<State>({
   state: {
     cards: [],
     filteredCards: [],
@@ -16,21 +32,26 @@ export default createStore({
     ]
   },
   getters: {
-    getCards (state) {
+    getCards (state: State) {
       return state.cards;
     },
-    getFilteredCards (state) {
+    getFilteredCards (state: State) {
       return state.filteredCards;
     },
-    getLocations (state) {
+    getLocations (state: State) {
       return state.locations;
+    },
+    getCard (state: State) {
+      return (id: number) => {
+        return state.cards.find((card: ICard) => card.name === id.toString())
+      };
     }
   },
   mutations: {
-    setFilteredCards (state, payload) {
+    setFilteredCards (state: State, payload: ICard[]) {
       state.filteredCards = payload;
     },
-    setCards (state, payload) {
+    setCards (state: State, payload: ICard[]) {
       state.cards = payload;
     }
   },

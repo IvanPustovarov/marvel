@@ -25,8 +25,11 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { ICard } from "@/interfaces/ICard";
+
+export default defineComponent({
   components: {},
   name: "CardPage",
   props: {},
@@ -35,22 +38,19 @@ export default {
   },
   mounted() {},
   computed: {
-    params() {
-      return this.$route.params;
+    cardId(): string | string[] {
+      return this.$route.params.id;
     },
-    cardId() {
-      return this.params.id;
-    },
-    card() {
+    card(): ICard {
       return this.$store.state.cards.find(
-        (card) => card.name === this.cardId
+          (card: ICard) => card.name === this.cardId
       );
     },
-    release () {
+    release (): string {
       return this.card.release ? "Выпущена" : "Не выпущена"
     },
-    pool () {
-      const poolRus = {
+    pool(): string {
+      const poolRus: Record<number, string> = {
         0: 'Стартовый пул',
         1: '1-14 уровни',
         2: '1 пул',
@@ -58,11 +58,11 @@ export default {
         4: '3 пул',
         5: '4 пул',
         6: '5 пул'
-      };
+      }
       return poolRus[this.card.pool];
     }
   },
-};
+});
 </script>
 
 <style scoped lang="scss">

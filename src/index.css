@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+@layer base {
+    * {
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
 .cont-all{
     @apply flex
 }
